@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animes Gammy - Catálogo</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Top Bar estilo az-animex -->
+    <div class="top-bar">
+        <div class="logo-area">
+            <a href="#" class="logo">Animes Gammy</a>
+            <div class="nav-links">
+                <a href="#">Inicio</a>
+                <a href="#">Catálogo</a>
+                <a href="#">Novedades</a>
+                <a href="#">Popular</a>
+            </div>
+        </div>
+        <div class="user-actions">
+            <!-- Solo el carrito, eliminada la campana -->
+            <button class="cart-button" id="cartButton">
+                🛒
+                <span class="cart-badge" id="cartCount">0</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <h1 class="hero-title">Catálogo de Animes</h1>
+        <p class="hero-subtitle">Explora y descubre tu próxima serie favorita</p>
+        
+        <div class="search-container">
+            <input type="text" class="search-box" id="searchInput" placeholder="Buscar anime por nombre o categoría...">
+        </div>
+    </div>
+
+    <!-- Categories Section -->
+    <div class="categories-section">
+        <h3 class="categories-title">Categorías</h3>
+        <div class="categories-scroll" id="categoriesList"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="content-header">
+            <h2 class="content-title" id="contentTitle">Todos los Animes</h2>
+            <span class="results-count" id="resultsCount">0 resultados</span>
+        </div>
+
+        <!-- Lista de animes -->
+        <div class="anime-list" id="animeList"></div>
+    </div>
+
+    <!-- Modal estilo az-animex -->
+    <div class="modal" id="animeModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            
+            <!-- Imagen grande estilo az-animex -->
+            <div class="modal-image-container">
+                <img id="modalImage" src="" alt="">
+                <div class="modal-image-overlay"></div>
+            </div>
+            
+            <!-- Todo el contenido debajo -->
+            <div class="modal-info">
+                <div class="modal-title-section">
+                    <div>
+                        <h2 class="modal-title" id="modalTitle"></h2>
+                        <div class="modal-categories" id="modalCategories"></div>
+                    </div>
+                    <button class="modal-add-btn" id="modalAddBtn">+ Agregar al carrito</button>
+                </div>
+
+                <div class="modal-stats-grid">
+                    <div class="modal-stat-item">
+                        <div class="modal-stat-label">Temp. Actual</div>
+                        <div class="modal-stat-value" id="modalCurrentSeason"></div>
+                    </div>
+                    <div class="modal-stat-item">
+                        <div class="modal-stat-label">Total Temp.</div>
+                        <div class="modal-stat-value" id="modalTotalSeasons"></div>
+                    </div>
+                </div>
+
+                <!-- Sección de tamaño y calidad -->
+                <div class="modal-size-info">
+                    <div class="modal-size-item">
+                        <div class="modal-size-label">Por capítulo</div>
+                        <div class="modal-size-value">
+                            <i>💾</i> <span id="modalSizePerEpisode"></span>
+                        </div>
+                    </div>
+                    <div class="modal-size-item">
+                        <div class="modal-size-label">Total</div>
+                        <div class="modal-size-value">
+                            <i>📀</i> <span id="modalTotalSize"></span>
+                        </div>
+                    </div>
+                    <div class="modal-size-item">
+                        <div class="modal-size-label">Calidad</div>
+                        <div class="modal-size-value" id="modalQuality"></div>
+                    </div>
+                </div>
+
+                <div class="modal-description">
+                    <h3>Sinopsis</h3>
+                    <p id="modalDescription"></p>
+                </div>
+
+                <div class="modal-rating-container">
+                    <div class="modal-rating-number" id="modalRating"></div>
+                    <div class="modal-rating-stars" id="modalStars"></div>
+                </div>
+
+                <a href="#" class="modal-download-btn" id="modalDownload" target="_blank" rel="noopener noreferrer">
+                    📥 DESCARGAR
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Panel del carrito -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-panel" id="cartPanel">
+        <div class="cart-header">
+            <h3><i>🛒</i> Mi Carrito</h3>
+            <button class="close-cart" id="closeCart">✕</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total animes:</span>
+                <span id="cartTotal">0</span>
+            </div>
+            <button class="whatsapp-btn" id="whatsappBtn" disabled>
+                <i>📱</i> Enviar pedido por WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Animes Gammy v3.0 - Catálogo personal de anime</p>
+        <p style="margin-top: 10px; font-size: 12px;">Todos los datos se guardan localmente | PWA Instalable</p>
+    </footer>
+
+    <script src="catalogo.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
