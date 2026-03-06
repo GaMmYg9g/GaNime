@@ -28,86 +28,23 @@ const whatsappBtn = document.getElementById('whatsappBtn');
 const closeCart = document.getElementById('closeCart');
 const cartButton = document.getElementById('cartButton');
 
-// Cargar animes desde los archivos del CMS
-async function cargarAnimes() {
-    try {
-        // Primero intentamos cargar el índice
-        const indexResponse = await fetch('content/anime/index.json');
-        const archivos = await indexResponse.json();
+// Cargar datos desde catalogo.js
+document.addEventListener('DOMContentLoaded', () => {
+    if (typeof catalogo !== 'undefined' && catalogo.animes && catalogo.animes.length > 0) {
+        allAnimes = catalogo.animes;
         
-        let animes = [];
-        
-        // Cargar cada archivo YAML
-        for (let archivo of archivos) {
-            try {
-                const response = await fetch(`content/anime/${archivo}`);
-                const texto = await response.text();
-                
-                // Convertir YAML a objeto (simple)
-                const anime = convertirYAMLtoJSON(texto);
-                if (anime) animes.push(anime);
-            } catch (e) {
-                console.log('Error cargando:', archivo);
-            }
-        }
-        
-        return animes;
-    } catch (error) {
-        console.log('No hay animes en el CMS, usando datos de respaldo');
-        return [];
-    }
-}
-
-// Convertir YAML básico a objeto (versión simple)
-function convertirYAMLtoJSON(yaml) {
-    try {
-        const lines = yaml.split('\n');
-        const obj = {};
-        
-        lines.forEach(line => {
-            if (line.includes(':')) {
-                const [key, value] = line.split(':').map(s => s.trim());
-                if (value.startsWith('- ')) {
-                    // Es una lista
-                    obj[key] = value.split('- ').filter(v => v).map(v => v.trim());
-                } else if (!isNaN(value)) {
-                    // Es número
-                    obj[key] = parseFloat(value);
-                } else if (value === 'true' || value === 'false') {
-                    // Es booleano
-                    obj[key] = value === 'true';
-                } else {
-                    // Es string
-                    obj[key] = value.replace(/"/g, '');
-                }
-            }
-        });
-        
-        return obj;
-    } catch (e) {
-        return null;
-    }
-}
-
-// Inicialización
-document.addEventListener('DOMContentLoaded', async () => {
-    allAnimes = await cargarAnimes();
-    
-    if (allAnimes.length === 0) {
-        // Si no hay animes en CMS, mostramos mensaje
-        animeList.innerHTML = '<div class="no-results"><i>📺</i><br>No hay animes aún.<br><small>Agrega desde el panel de administración</small></div>';
-    } else {
         allAnimes.forEach(anime => {
-            if (anime.categorias) {
+            if (anime.categorias && Array.isArray(anime.categorias)) {
                 anime.categorias.forEach(cat => allCategories.add(cat));
             }
         });
         
         renderCategories();
         renderAnimeList();
+        updateCartUI();
+    } else {
+        animeList.innerHTML = '<div class="no-results"><i>📺</i><br>No hay animes en el catálogo.</div>';
     }
-    
-    updateCartUI();
 });
 
 function renderCategories() {
@@ -247,6 +184,41 @@ function getStars(rating) {
     return stars;
 }
 
+// Función para configurar los toggles
+function setupToggles() {
+    // Toggle de sinopsis
+    const toggleSynopsisBtn = document.getElementById('modalToggleSynopsisBtn');
+    const synopsis = document.getElementById('modalSynopsis');
+    
+    if (toggleSynopsisBtn && synopsis) {
+        const newBtn = toggleSynopsisBtn.cloneNode(true);
+        toggleSynopsisBtn.parentNode.replaceChild(newBtn, toggleSynopsisBtn);
+        
+        newBtn.addEventListener('click', () => {
+            synopsis.classList.toggle('show');
+            newBtn.classList.toggle('active');
+            const span = newBtn.querySelector('span');
+            span.textContent = synopsis.classList.contains('show') ? '▲ Ocultar sinopsis' : '▼ Ver sinopsis';
+        });
+    }
+
+    // Toggle de tamaño
+    const toggleSizeBtn = document.getElementById('modalToggleSizeBtn');
+    const size = document.getElementById('modalSize');
+    
+    if (toggleSizeBtn && size) {
+        const newBtn = toggleSizeBtn.cloneNode(true);
+        toggleSizeBtn.parentNode.replaceChild(newBtn, toggleSizeBtn);
+        
+        newBtn.addEventListener('click', () => {
+            size.classList.toggle('show');
+            newBtn.classList.toggle('active');
+            const span = newBtn.querySelector('span');
+            span.textContent = size.classList.contains('show') ? '▲ Ocultar detalles de peso' : '▼ Ver detalles de peso';
+        });
+    }
+}
+
 function openModal(anime) {
     document.getElementById('modalImage').src = anime.portada;
     document.getElementById('modalTitle').textContent = anime.nombre;
@@ -271,9 +243,33 @@ function openModal(anime) {
     modalBtn.innerHTML = isInCart ? '✓ En carrito' : '+ Agregar al carrito';
     modalBtn.classList.toggle('added', isInCart);
     
+    // Resetear toggles a estado cerrado
+    const synopsis = document.getElementById('modalSynopsis');
+    const size = document.getElementById('modalSize');
+    const toggleSynopsisBtn = document.getElementById('modalToggleSynopsisBtn');
+    const toggleSizeBtn = document.getElementById('modalToggleSizeBtn');
+    
+    if (synopsis) synopsis.classList.remove('show');
+    if (size) size.classList.remove('show');
+    
+    if (toggleSynopsisBtn) {
+        toggleSynopsisBtn.classList.remove('active');
+        const span = toggleSynopsisBtn.querySelector('span');
+        if (span) span.textContent = '▼ Ver sinopsis';
+    }
+    
+    if (toggleSizeBtn) {
+        toggleSizeBtn.classList.remove('active');
+        const span = toggleSizeBtn.querySelector('span');
+        if (span) span.textContent = '▼ Ver detalles de peso';
+    }
+    
     modal.dataset.currentAnime = JSON.stringify(anime);
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
+    
+    // Configurar los toggles
+    setTimeout(setupToggles, 100);
 }
 
 window.closeModal = () => {
