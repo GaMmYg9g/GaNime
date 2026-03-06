@@ -6,7 +6,7 @@ media:
 collections:
   - name: animes
     label: "🎬 Mis Animes"
-    folder: "content/animes"
+    folder: "content/anime"
     create: true
     slug: "{{id}}"
     fields:
