@@ -16,19 +16,19 @@ const catalogo = {
             capitulos: 25
         },
         {
-            nombre: "Attack on Titan",
-            portada: "IMG/aot_temp4.jpg",
-            temporadasTotales: 4,
-            temporadaActual: 4,
-            descripcion: "Temporada final - El enfrentamiento decisivo entre Marley y Paradis alcanza su punto culminante. Los secretos del mundo se revelan mientras Eren busca la verdadera libertad.",
-            valoracion: 9.5,
+            nombre: "Ao Ashi",
+            portada: "IMG/AoAshi.jpg",
+            temporadasTotales: 1,
+            temporadaActual: 1,
+            descripcion: "Algo.",
+            valoracion: 7.5,
             color: "#8B0000",
-            categorias: ["Acción", "Drama", "Fantasía Oscura", "Shonen"],
+            categorias: ["Deportes", "Drama", "Romance", "Shonen"],
             enlaceDescarga: "#",
-            tamañoPorCapitulo: "400 MB",
-            tamañoTotal: "4.8 GB",
-            calidad: "1080p BD",
-            capitulos: 12
+            tamañoPorCapitulo: "120 MB",
+            tamañoTotal: "2.89 GB",
+            calidad: "720p",
+            capitulos: 24
         },
         {
             nombre: "Jujutsu Kaisen",
