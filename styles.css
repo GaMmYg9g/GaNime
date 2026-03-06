@@ -7,10 +7,9 @@
 
 body {
     background-color: #0f0f0f;
-    color: #ffffff;
+    color: #fff;
 }
 
-/* Header estilo az-animex */
 .top-bar {
     background-color: #1a1a1a;
     padding: 10px 20px;
@@ -58,16 +57,15 @@ body {
     align-items: center;
 }
 
-/* Carrito más grande y redondeado como los botones de + */
 .cart-button {
     background: none;
     border: 2px solid #9B59B6;
     color: #9B59B6;
     cursor: pointer;
-    font-size: 24px;  /* Tamaño más grande */
-    width: 50px;       /* Ancho fijo */
-    height: 50px;      /* Alto fijo */
-    border-radius: 50%; /* Completamente redondo */
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -103,7 +101,6 @@ body {
     display: flex;
 }
 
-/* Hero Section */
 .hero-section {
     background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
     padding: 40px 20px;
@@ -114,7 +111,6 @@ body {
 .hero-title {
     font-size: 32px;
     margin-bottom: 10px;
-    color: #fff;
 }
 
 .hero-subtitle {
@@ -125,7 +121,6 @@ body {
 .search-container {
     max-width: 600px;
     margin: 0 auto;
-    position: relative;
 }
 
 .search-box {
@@ -137,18 +132,12 @@ body {
     border-radius: 8px;
     color: #fff;
     outline: none;
-    transition: border-color 0.3s;
 }
 
 .search-box:focus {
     border-color: #9B59B6;
 }
 
-.search-box::placeholder {
-    color: #666;
-}
-
-/* Categories */
 .categories-section {
     padding: 20px;
     background-color: #1a1a1a;
@@ -165,8 +154,7 @@ body {
 .categories-scroll {
     overflow-x: auto;
     white-space: nowrap;
-    padding: 5px 0 15px 0;
-    -webkit-overflow-scrolling: touch;
+    padding: 5px 0 15px;
     scrollbar-width: thin;
     scrollbar-color: #9B59B6 #333;
 }
@@ -177,7 +165,6 @@ body {
 
 .categories-scroll::-webkit-scrollbar-track {
     background: #333;
-    border-radius: 10px;
 }
 
 .categories-scroll::-webkit-scrollbar-thumb {
@@ -198,12 +185,7 @@ body {
     font-size: 14px;
 }
 
-.category-chip:hover {
-    background-color: #9B59B6;
-    color: #fff;
-    border-color: #9B59B6;
-}
-
+.category-chip:hover,
 .category-chip.active {
     background-color: #9B59B6;
     color: #fff;
@@ -216,12 +198,12 @@ body {
     color: #9B59B6;
 }
 
-.special-category:hover, .special-category.active {
+.special-category:hover,
+.special-category.active {
     background-color: #9B59B6;
     color: #fff;
 }
 
-/* Main content */
 .main-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -237,7 +219,6 @@ body {
 
 .content-title {
     font-size: 24px;
-    color: #fff;
 }
 
 .results-count {
@@ -245,7 +226,6 @@ body {
     font-size: 14px;
 }
 
-/* Lista de animes */
 .anime-list {
     display: flex;
     flex-direction: column;
@@ -262,7 +242,6 @@ body {
     gap: 15px;
     cursor: pointer;
     transition: all 0.3s;
-    position: relative;
 }
 
 .anime-list-item:hover {
@@ -283,7 +262,6 @@ body {
     height: 50px;
     border-radius: 4px;
     overflow: hidden;
-    background-color: #2a2a2a;
     border: 1px solid #444;
 }
 
@@ -326,7 +304,6 @@ body {
     font-weight: bold;
 }
 
-/* Botón de agregar al carrito en la lista */
 .add-to-cart-btn {
     background: none;
     border: 2px solid #9B59B6;
@@ -367,17 +344,14 @@ body {
     color: #9B59B6;
 }
 
-/* Estilos para estrellas - EN DORADO */
 .star {
     color: #444;
-    font-size: inherit;
     display: inline-block;
     position: relative;
 }
 
 .star.filled {
     color: #FFD700;
-    text-shadow: 0 0 5px rgba(255, 215, 0, 0.3);
 }
 
 .star.half-filled {
@@ -393,10 +367,8 @@ body {
     overflow: hidden;
     left: 0;
     top: 0;
-    text-shadow: 0 0 5px rgba(255, 215, 0, 0.3);
 }
 
-/* Modal estilo az-animex */
 .modal {
     display: none;
     position: fixed;
@@ -404,7 +376,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.95);
+    background: rgba(0,0,0,0.95);
     z-index: 1000;
     overflow-y: auto;
 }
@@ -416,7 +388,7 @@ body {
 .modal-content {
     max-width: 800px;
     margin: 40px auto;
-    background-color: #1a1a1a;
+    background: #1a1a1a;
     border-radius: 12px;
     overflow: hidden;
     position: relative;
@@ -425,14 +397,8 @@ body {
 }
 
 @keyframes modalFadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .modal-close {
@@ -443,13 +409,10 @@ body {
     border: 1px solid #9B59B6;
     color: #fff;
     font-size: 24px;
-    cursor: pointer;
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    cursor: pointer;
     z-index: 10;
     transition: all 0.3s;
 }
@@ -464,7 +427,7 @@ body {
     height: 450px;
     overflow: hidden;
     position: relative;
-    background-color: #000;
+    background: #000;
 }
 
 .modal-image-container img {
@@ -485,20 +448,18 @@ body {
 
 .modal-info {
     padding: 25px;
-    background-color: #1a1a1a;
 }
 
 .modal-title-section {
-    margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    margin-bottom: 20px;
 }
 
 .modal-title {
     font-size: 28px;
     font-weight: bold;
-    color: #fff;
     margin-bottom: 10px;
 }
 
@@ -506,11 +467,10 @@ body {
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
-    margin-bottom: 15px;
 }
 
 .modal-category-tag {
-    background-color: #2a2a2a;
+    background: #2a2a2a;
     color: #9B59B6;
     padding: 4px 12px;
     border-radius: 4px;
@@ -518,9 +478,8 @@ body {
     border: 1px solid #444;
 }
 
-/* Botón de agregar en modal */
 .modal-add-btn {
-    background-color: transparent;
+    background: transparent;
     border: 2px solid #9B59B6;
     color: #9B59B6;
     padding: 10px 20px;
@@ -529,25 +488,18 @@ body {
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s;
-    display: flex;
-    align-items: center;
-    gap: 8px;
     white-space: nowrap;
 }
 
 .modal-add-btn:hover {
-    background-color: #9B59B6;
+    background: #9B59B6;
     color: white;
 }
 
 .modal-add-btn.added {
-    background-color: #FFD700;
+    background: #FFD700;
     border-color: #FFD700;
     color: #000;
-}
-
-.modal-add-btn i {
-    font-size: 16px;
 }
 
 .modal-stats-grid {
@@ -555,9 +507,9 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
     margin-bottom: 25px;
-    background-color: #0f0f0f;
-    border-radius: 8px;
+    background: #0f0f0f;
     padding: 15px;
+    border-radius: 8px;
     border: 1px solid #333;
 }
 
@@ -578,15 +530,14 @@ body {
     font-weight: bold;
 }
 
-/* Sección de información de tamaño en el modal */
 .modal-size-info {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
     margin-bottom: 25px;
-    background-color: #0f0f0f;
-    border-radius: 8px;
+    background: #0f0f0f;
     padding: 20px;
+    border-radius: 8px;
     border: 1px solid #333;
 }
 
@@ -599,7 +550,6 @@ body {
     font-size: 12px;
     text-transform: uppercase;
     margin-bottom: 8px;
-    letter-spacing: 0.5px;
 }
 
 .modal-size-value {
@@ -613,13 +563,11 @@ body {
 }
 
 .modal-size-value i {
-    font-size: 16px;
     color: #FFD700;
 }
 
 .modal-quality-badge {
-    display: inline-block;
-    background-color: #2a2a2a;
+    background: #2a2a2a;
     color: #FFD700;
     padding: 4px 10px;
     border-radius: 4px;
@@ -630,9 +578,9 @@ body {
 
 .modal-description {
     margin-bottom: 25px;
-    background-color: #0f0f0f;
-    border-radius: 8px;
+    background: #0f0f0f;
     padding: 20px;
+    border-radius: 8px;
     border: 1px solid #333;
 }
 
@@ -641,7 +589,6 @@ body {
     font-size: 16px;
     margin-bottom: 10px;
     text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 .modal-description p {
@@ -654,9 +601,9 @@ body {
     display: flex;
     align-items: center;
     gap: 20px;
-    background-color: #0f0f0f;
-    border-radius: 8px;
+    background: #0f0f0f;
     padding: 20px;
+    border-radius: 8px;
     margin-bottom: 25px;
     border: 1px solid #333;
 }
@@ -674,19 +621,11 @@ body {
     font-size: 24px;
 }
 
-.modal-rating-stars .star.filled {
-    color: #FFD700;
-}
-
-.modal-rating-stars .star.half-filled::before {
-    color: #FFD700;
-}
-
 .modal-download-btn {
     display: block;
     width: 100%;
     padding: 16px;
-    background-color: #9B59B6;
+    background: #9B59B6;
     color: white;
     text-decoration: none;
     border-radius: 8px;
@@ -694,27 +633,23 @@ body {
     font-size: 16px;
     text-align: center;
     transition: background 0.3s;
-    border: none;
-    cursor: pointer;
     text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 .modal-download-btn:hover {
-    background-color: #8E44AD;
+    background: #8E44AD;
 }
 
-/* Panel del carrito */
 .cart-panel {
     position: fixed;
     top: 0;
     right: -400px;
     width: 380px;
     height: 100vh;
-    background-color: #1a1a1a;
+    background: #1a1a1a;
     border-left: 2px solid #9B59B6;
     z-index: 1000;
-    transition: right 0.3s ease;
+    transition: right 0.3s;
     display: flex;
     flex-direction: column;
     box-shadow: -5px 0 20px rgba(0,0,0,0.5);
@@ -730,19 +665,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #1a1a1a;
 }
 
 .cart-header h3 {
     color: #9B59B6;
-    font-size: 20px;
     display: flex;
     align-items: center;
     gap: 10px;
-}
-
-.cart-header h3 i {
-    font-size: 24px;
 }
 
 .close-cart {
@@ -752,16 +681,13 @@ body {
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
     font-size: 20px;
     transition: all 0.3s;
 }
 
 .close-cart:hover {
-    background-color: #9B59B6;
+    background: #9B59B6;
     color: white;
     transform: rotate(90deg);
 }
@@ -773,7 +699,7 @@ body {
 }
 
 .cart-item {
-    background-color: #0f0f0f;
+    background: #0f0f0f;
     border: 1px solid #333;
     border-radius: 8px;
     padding: 12px;
@@ -781,31 +707,12 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
-    animation: slideIn 0.3s;
-}
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateX(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
 }
 
 .cart-item-image {
     width: 50px;
     height: 50px;
     border-radius: 4px;
-    overflow: hidden;
-    border: 1px solid #444;
-}
-
-.cart-item-image img {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
 }
 
@@ -814,7 +721,6 @@ body {
 }
 
 .cart-item-title {
-    color: #fff;
     font-size: 14px;
     font-weight: 500;
     margin-bottom: 4px;
@@ -832,16 +738,12 @@ body {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
-    font-size: 16px;
     transition: all 0.3s;
 }
 
 .cart-item-remove:hover {
-    background-color: #9B59B6;
+    background: #9B59B6;
     color: white;
     transform: scale(1.1);
 }
@@ -849,15 +751,13 @@ body {
 .cart-footer {
     padding: 20px;
     border-top: 1px solid #333;
-    background-color: #1a1a1a;
+    background: #1a1a1a;
 }
 
 .cart-total {
     display: flex;
     justify-content: space-between;
-    color: #fff;
     margin-bottom: 15px;
-    font-size: 16px;
 }
 
 .cart-total span:last-child {
@@ -869,7 +769,7 @@ body {
 .whatsapp-btn {
     width: 100%;
     padding: 15px;
-    background-color: #25D366;
+    background: #25D366;
     color: white;
     border: none;
     border-radius: 8px;
@@ -884,11 +784,11 @@ body {
 }
 
 .whatsapp-btn:hover {
-    background-color: #128C7E;
+    background: #128C7E;
 }
 
 .whatsapp-btn:disabled {
-    background-color: #444;
+    background: #444;
     cursor: not-allowed;
     opacity: 0.5;
 }
@@ -903,17 +803,15 @@ body {
     font-size: 48px;
     color: #9B59B6;
     margin-bottom: 15px;
-    display: block;
 }
 
-/* Overlay para cuando el carrito está abierto */
 .cart-overlay {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background: rgba(0,0,0,0.5);
     z-index: 999;
     display: none;
 }
@@ -922,12 +820,11 @@ body {
     display: block;
 }
 
-/* Estados vacíos */
 .no-results {
     text-align: center;
     padding: 60px 20px;
     color: #aaa;
-    background-color: #1a1a1a;
+    background: #1a1a1a;
     border-radius: 8px;
     border: 1px solid #333;
 }
@@ -936,21 +833,17 @@ body {
     font-size: 48px;
     color: #9B59B6;
     margin-bottom: 15px;
-    display: block;
 }
 
-/* Footer */
 footer {
-    background-color: #1a1a1a;
+    background: #1a1a1a;
     padding: 30px 20px;
     margin-top: 50px;
     border-top: 1px solid #333;
     text-align: center;
     color: #aaa;
-    font-size: 14px;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .top-bar {
         flex-direction: column;
@@ -961,23 +854,6 @@ footer {
         display: none;
     }
     
-    .main-content {
-        padding: 15px;
-    }
-    
-    .list-info {
-        flex-wrap: wrap;
-        gap: 8px;
-    }
-    
-    .list-title {
-        min-width: 100%;
-    }
-    
-    .modal-content {
-        margin: 20px;
-    }
-    
     .modal-image-container {
         height: 300px;
     }
@@ -986,45 +862,12 @@ footer {
         font-size: 24px;
     }
     
-    .modal-rating-container {
-        flex-direction: column;
-        text-align: center;
-    }
-    
     .cart-panel {
         width: 100%;
         right: -100%;
     }
     
-    .modal-title-section {
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    .modal-add-btn {
-        width: 100%;
-        justify-content: center;
-    }
-    
     .modal-size-info {
         grid-template-columns: 1fr;
-        gap: 10px;
-    }
-    
-    .modal-size-item {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        text-align: left;
-        padding: 5px 0;
-        border-bottom: 1px solid #333;
-    }
-    
-    .modal-size-item:last-child {
-        border-bottom: none;
-    }
-    
-    .modal-size-label {
-        margin-bottom: 0;
     }
 }
