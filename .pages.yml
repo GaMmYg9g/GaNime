@@ -1,26 +1,9 @@
-media:
-  input: IMG
-  output: IMG
+media: IMG
 
 collections:
   - name: animes
-    label: "🎬 Mis Animes"
-    folder: "content/anime"
+    label: "Mis Animes"
+    folder: content/anime
     create: true
-    slug: "{{id}}"
     fields:
-      - { label: "ID único", name: "id", widget: "string" }
       - { label: "Nombre", name: "nombre", widget: "string" }
-      - { label: "Imagen", name: "portada", widget: "string" }
-      - { label: "Total temporadas", name: "temporadasTotales", widget: "number" }
-      - { label: "Temporada actual", name: "temporadaActual", widget: "number" }
-      - { label: "Descripción", name: "descripcion", widget: "text" }
-      - { label: "Valoración", name: "valoracion", widget: "number" }
-      - { label: "Color", name: "color", widget: "string" }
-      - { label: "Categorías", name: "categorias", widget: "list" }
-      - { label: "Tamaño/capítulo", name: "tamañoPorCapitulo", widget: "string" }
-      - { label: "Tamaño total", name: "tamañoTotal", widget: "string" }
-      - { label: "Calidad", name: "calidad", widget: "string" }
-      - { label: "Capítulos", name: "capitulos", widget: "number" }
-      - { label: "Link descarga", name: "enlaceDescarga", widget: "string" }
-      - { label: "Fecha", name: "fechaAgregado", widget: "datetime" }
