@@ -2,163 +2,236 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animes Gammy - Catálogo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#0d0a1a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="GaNime">
+    <meta name="description" content="Catálogo de animes, series y películas">
+    
+    <title>GaNime</title>
+    
     <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" href="icons/icono.jpg">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/temas.css">    
 </head>
 <body>
-    <!-- Top Bar estilo az-animex -->
-    <div class="top-bar">
-        <div class="logo-area">
-            <a href="#" class="logo">Animes Gammy</a>
-            <div class="nav-links">
-                <a href="#">Inicio</a>
-                <a href="#">Catálogo</a>
-                <a href="#">Novedades</a>
-                <a href="#">Popular</a>
-            </div>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">
+            <span class="logo-icon" id="logoIcon">⚡</span>
+            <span class="logo-text">GaNime</span>
         </div>
-        <div class="user-actions">
-            <button class="cart-button" id="cartButton">
-                🛒
+        <div class="header-stats">
+            <span class="header-count" id="totalCount"><i class="fas fa-database"></i> <span id="totalNumber">0</span></span>
+            <button class="header-btn notif-btn" id="notifBtn" onclick="toggleNotificaciones()" title="Notificaciones">
+                <i class="fas fa-bell"></i>
+                <span class="notif-dot" id="notifDot"></span>
+            </button>
+            <button class="header-btn info-btn" onclick="toggleInfo()" title="Información">
+                <i class="fas fa-info-circle"></i>
+                <span class="notif-dot" id="infoBadge"></span>
+            </button>
+            <button class="header-btn tema-btn" onclick="toggleTemas()" title="Temas">
+                <i class="fas fa-palette"></i>
+            </button>
+            <button class="header-btn cart-btn" onclick="toggleCarrito()" title="Carrito">
+                <i class="fas fa-shopping-cart"></i>
                 <span class="cart-badge" id="cartCount">0</span>
             </button>
         </div>
-    </div>
+    </header>
 
-    <!-- Hero Section -->
-    <div class="hero-section">
-        <h1 class="hero-title">Catálogo de Animes</h1>
-        <p class="hero-subtitle">Explora y descubre tu próxima serie favorita</p>
-        
-        <div class="search-container">
-            <input type="text" class="search-box" id="searchInput" placeholder="Buscar anime por nombre o categoría...">
-        </div>
-    </div>
-
-    <!-- Categories Section -->
-    <div class="categories-section">
-        <h3 class="categories-title">Categorías</h3>
-        <div class="categories-scroll" id="categoriesList"></div>
-    </div>
-
-    <!-- Main Content -->
-    <div class="main-content">
-        <div class="content-header">
-            <h2 class="content-title" id="contentTitle">Todos los Animes</h2>
-            <span class="results-count" id="resultsCount">0 resultados</span>
-        </div>
-
-        <!-- Lista de animes -->
-        <div class="anime-list" id="animeList"></div>
-    </div>
-
-    <!-- Modal estilo az-animex con dos toggles separados -->
-    <div class="modal" id="animeModal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal()">×</button>
-            
-            <!-- Imagen grande -->
-            <div class="modal-image-container">
-                <img id="modalImage" src="" alt="">
-                <div class="modal-image-overlay"></div>
-            </div>
-            
-            <!-- Todo el contenido debajo -->
-            <div class="modal-info">
-                <div class="modal-title-section">
-                    <div>
-                        <h2 class="modal-title" id="modalTitle"></h2>
-                        <div class="modal-categories" id="modalCategories"></div>
-                    </div>
-                    <button class="modal-add-btn" id="modalAddBtn">+ Agregar al carrito</button>
-                </div>
-
-                <div class="modal-stats-grid">
-                    <div class="modal-stat-item">
-                        <div class="modal-stat-label">Temp. Actual</div>
-                        <div class="modal-stat-value" id="modalCurrentSeason"></div>
-                    </div>
-                    <div class="modal-stat-item">
-                        <div class="modal-stat-label">Total Temp.</div>
-                        <div class="modal-stat-value" id="modalTotalSeasons"></div>
-                    </div>
-                </div>
-
-                <!-- BOTÓN 1: SINOPSIS -->
-                <button class="modal-toggle-btn" id="modalToggleSynopsisBtn">
-                    <span>▼ Ver sinopsis</span>
-                </button>
-                <div class="modal-collapsible" id="modalSynopsis">
-                    <div class="modal-description">
-                        <p id="modalDescription"></p>
-                    </div>
-                </div>
-
-                <!-- BOTÓN 2: DETALLES DE PESO -->
-                <button class="modal-toggle-btn" id="modalToggleSizeBtn">
-                    <span>▼ Ver detalles de peso</span>
-                </button>
-                <div class="modal-collapsible" id="modalSize">
-                    <div class="modal-size-info">
-                        <div class="modal-size-item">
-                            <div class="modal-size-label">Por capítulo</div>
-                            <div class="modal-size-value">
-                                <i>💾</i> <span id="modalSizePerEpisode"></span>
-                            </div>
-                        </div>
-                        <div class="modal-size-item">
-                            <div class="modal-size-label">Total</div>
-                            <div class="modal-size-value">
-                                <i>📀</i> <span id="modalTotalSize"></span>
-                            </div>
-                        </div>
-                        <div class="modal-size-item">
-                            <div class="modal-size-label">Calidad</div>
-                            <div class="modal-size-value" id="modalQuality"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="modal-rating-container">
-                    <div class="modal-rating-number" id="modalRating"></div>
-                    <div class="modal-rating-stars" id="modalStars"></div>
-                </div>
-
-                <a href="#" class="modal-download-btn" id="modalDownload" target="_blank" rel="noopener noreferrer">
-                    📥 DESCARGAR
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Panel del carrito -->
-    <div class="cart-overlay" id="cartOverlay"></div>
-    <div class="cart-panel" id="cartPanel">
-        <div class="cart-header">
-            <h3><i>🛒</i> Mi Carrito</h3>
-            <button class="close-cart" id="closeCart">✕</button>
-        </div>
-        <div class="cart-items" id="cartItems"></div>
-        <div class="cart-footer">
-            <div class="cart-total">
-                <span>Total animes:</span>
-                <span id="cartTotal">0</span>
-            </div>
-            <button class="whatsapp-btn" id="whatsappBtn" disabled>
-                <i>📱</i> Enviar pedido por WhatsApp
+    <!-- BUSCADOR -->
+    <div class="search-box" id="searchBox">
+        <div class="search-wrapper">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="searchInput" placeholder="🔎 Escriba algo para buscar..." autofocus>
+            <button class="search-clear" id="searchClear" onclick="limpiarBusqueda()">
+                <i class="fas fa-times"></i>
             </button>
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>Animes Gammy v3.0 - Catálogo personal de anime</p>
-        <p style="margin-top: 10px; font-size: 12px;">Todos los datos se guardan localmente | PWA Instalable</p>
-    </footer>
+    <!-- OVERLAY DE BÚSQUEDA -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-overlay-content">
+            <div class="search-overlay-icon">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="search-overlay-title" id="searchOverlayTitle">Buscando Anime...</div>
+            <div class="search-suggestions" id="searchSuggestions"></div>
+        </div>
+    </div>
 
-    <script src="catalogo.js"></script>
-    <script src="app.js"></script>
+    <!-- FILTROS -->
+    <div class="filters" id="filtersContainer">
+        <div class="filters-scroll" id="filtersScroll">
+            <button class="filter-chip active" data-filter="todos" data-value="todos">Todos</button>
+            <button class="filter-chip" data-filter="recientes" data-value="recientes">Recientes</button>
+            <button class="filter-chip" data-filter="orden" data-value="az">Ordenar #-Z</button>
+            <button class="filter-chip" data-filter="fecha" data-value="fecha-aFecha>Año ↑</button>
+            <button class="filter-chip" data-filter="puntuacion" data-value="puntuacion-desc">⭐ ↓</button>
+            <button class="filter-chip" data-filter="tipo" data-value="serie">Series</button>
+            <button class="filter-chip" data-filter="tipo" data-value="película">Películas</button>
+            <button class="filter-chip" data-filter="tipo" data-value="ova">OVA</button>
+            <button class="filter-chip" data-filter="tipo" data-value="especial">Especiales</button>
+            <button class="filter-chip" data-filter="tipo" data-value="ona">ONA</button>
+        </div>
+    </div>
+
+    <!-- RESULTADOS STATS -->
+    <div class="result-stats" id="resultStats"></div>
+
+    <!-- GRID -->
+    <div class="grid" id="grid"></div>
+
+    <!-- MODAL -->
+    <div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this)cerrarModal()">
+        <div class="modal" id="modalContent"></div>
+    </div>
+
+    <!-- CARRITO -->
+    <div class="cart-backdrop" id="cartBackdrop" onclick="toggleCarrito()"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2><i class="fas fa-shopping-cart"></i> Pedidos</h2>
+            <button onclick="toggleCarrito()"><i class="fas fa-times"></i></button>
+        </div>
+        <div id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="cart-totals" id="cartTotals">
+                <div class="cart-total-line" id="cartPesoLine" style="font-size:14px; color:var(--text2);">
+                    <span>Peso total:</span>
+                    <span id="cartPesoTotal">0 GB</span>
+                </div>
+            </div>
+            <button class="btn-vaciar-carrito" onclick="vaciarCarrito()">
+                <i class="fas fa-trash"></i> Vaciar pedido
+            </button>
+            <button class="cart-whatsapp" onclick="enviarWhatsApp()">
+                <i class="fab fa-whatsapp"></i> Enviar pedido
+            </button>
+        </div>
+    </div>
+
+    <!-- NOTIFICACIONES PANEL -->
+    <div class="notif-panel" id="notifPanel">
+        <div class="notif-header">
+            <h3><i class="fas fa-bell"></i> Notificaciones</h3>
+            <button onclick="cerrarNotificaciones()"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="notif-list" id="notifList">
+            <div class="notif-empty">No hay notificaciones</div>
+        </div>
+    </div>
+    <div class="notif-backdrop" id="notifBackdrop" onclick="cerrarNotificaciones()"></div>
+
+    <!-- INFO PANEL -->
+    <div class="info-panel" id="infoPanel">
+        <div class="info-header">
+            <h3><i class="fas fa-info-circle"></i> Información</h3>
+            <button onclick="cerrarInfo()"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="info-content" id="infoContent"></div>
+    </div>
+    <div class="info-backdrop" id="infoBackdrop" onclick="cerrarInfo()"></div>
+
+    <!-- PANEL DE TEMAS -->
+    <div class="temas-panel" id="temasPanel">
+        <div class="temas-header">
+            <h3><i class="fas fa-palette"></i> Temas</h3>
+            <button onclick="cerrarTemas()"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="temas-grid">
+            <button class="tema-opcion" data-tema="auto">
+                <span class="tema-icono"><i class="fas fa-sync-alt"></i></span>
+                <span class="tema-nombre">Automático</span>
+            </button>
+            <button class="tema-opcion" data-tema="original">
+                <span class="tema-icono"><i class="fas fa-bolt"></i></span>
+                <span class="tema-nombre">Original</span>
+            </button>
+            <button class="tema-opcion" data-tema="claro">
+                <span class="tema-icono">✨</span>
+                <span class="tema-nombre">Claro</span>
+            </button>
+            <button class="tema-opcion" data-tema="oscuro">
+                <span class="tema-icono"><i class="fas fa-moon"></i></span>
+                <span class="tema-nombre">Oscuro</span>
+            </button>
+            <button class="tema-opcion" data-tema="primavera">
+                <span class="tema-icono"><i class="fas fa-seedling"></i></span>
+                <span class="tema-nombre">Primavera</span>
+            </button>
+            <button class="tema-opcion" data-tema="verano">
+                <span class="tema-icono"><i class="fas fa-sun"></i></span>
+                <span class="tema-nombre">Verano</span>
+            </button>
+            <button class="tema-opcion" data-tema="otono">
+                <span class="tema-icono"><i class="fas fa-leaf"></i></span>
+                <span class="tema-nombre">Otoño</span>
+            </button>
+            <button class="tema-opcion" data-tema="invierno">
+                <span class="tema-icono"><i class="fas fa-snowflake"></i></span>
+                <span class="tema-nombre">Invierno</span>
+            </button>
+            <button class="tema-opcion" data-tema="halloween">
+                <span class="tema-icono"><i class="fas fa-ghost"></i></span>
+                <span class="tema-nombre">Halloween</span>
+            </button>
+            <button class="tema-opcion" data-tema="navidad">
+                <span class="tema-icono"><i class="fas fa-tree"></i></span>
+                <span class="tema-nombre">Navidad</span>
+            </button>
+            <button class="tema-opcion" data-tema="fin-de-ano">
+                <span class="tema-icono">🏮<i class="fas fa-fireworks"></i></span>
+                <span class="tema-nombre">Fin de Año</span>
+            </button>
+        </div>
+    </div>
+    <div class="temas-backdrop" id="temasBackdrop" onclick="cerrarTemas()"></div>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMsg"></span>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="js/config.js"></script>
+    <script src="js/sonidos.js"></script>
+    <script src="js/data/data.js"></script>
+    <script src="js/data/data2.js"></script>
+    <script src="js/data/data3.js"></script>
+    <script src="js/data/data4.js"></script>
+    <script src="js/notificaciones.js"></script>
+    <script src="js/info.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/temas.js"></script>
+
+    <script>
+        // ===== SERVICE WORKER =====
+        if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then((registration) => {
+                        // Service Worker registrado
+                    })
+                    .catch((error) => {
+                        console.log('❌ Error al registrar Service Worker:', error);
+                    });
+            });
+        }
+
+        if (window.matchMedia('(display-mode: standalone)').matches) {
+            console.log('📱 GaNime ejecutándose como PWA instalada');
+        }
+    </script>
 </body>
 </html>
