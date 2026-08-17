@@ -1358,39 +1358,79 @@ function enviarWhatsApp() {
     
     let pesoTotal = 0;
     
-    let msg = '=== PEDIDO - GaNime ===\n\n';
+    // Fecha y hora actual
+    const ahora = new Date();
+    const fechaStr = ahora.toLocaleDateString('es-ES', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    });
+    const horaStr = ahora.toLocaleTimeString('es-ES', {
+        hour: '2-digit',
+        minute: '2-digit'
+    });
     
+    // ============================================
+    // ENCABEZADO
+    // ============================================
+    let msg = `*NUEVO PEDIDO - GaNime*\n`;
+    msg += `${fechaStr} · ${horaStr}\n`;
+    msg += `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n`;
+    msg += `*DETALLE DEL PEDIDO*\n\n`;
+    
+    // ============================================
+    // LISTA DE ANIMES
+    // ============================================
     carrito.forEach((c, i) => {
         const item = catalogo[c.idx];
+        if (!item) return;
         
+        // Calcular peso total
         if (c.peso) {
             const pesoNum = parseFloat(c.peso.replace(/[^0-9.,]/g, '').replace(',', '.'));
             if (!isNaN(pesoNum)) pesoTotal += pesoNum;
         }
         
-        msg += `${i+1}. ${c.nombre}\n`;
-        msg += `   Tipo: ${c.tipo || 'Serie'}\n`;
-        if (item?.saga) msg += `   Saga: ${item.saga}\n`;
-        if (c.peso) msg += `   Peso: ${c.peso}\n`;
-        msg += '\n';
+        // Mostrar cada anime con su información
+        const tipo = item.tipo || 'Serie';
+        const peso = c.peso || '0 GB';
+        
+        msg += `*${i+1}. ${item.nombre}*\n`;
+        msg += `   ${tipo}\n`;
+        msg += `   ${peso}\n\n`;
     });
     
+    // ============================================
+    // RESUMEN
+    // ============================================
     const pesoTotalStr = pesoTotal > 0 ? `${pesoTotal.toFixed(2)} GB` : '0 GB';
     
-    msg += '--- RESUMEN ---\n';
-    msg += `Total de animes: ${carrito.length}\n`;
-    msg += `Peso total: ${pesoTotalStr}\n\n`;
-    msg += 'Gracias por tu pedido!';
+    msg += `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
+    msg += `*RESUMEN*\n\n`;
+    msg += `    Total: ${carrito.length} animes\n`;
+    msg += `    Peso total: ${pesoTotalStr}\n\n`;
     
+    // ============================================
+    // PIE DE PÁGINA
+    // ============================================
+    msg += `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
+    msg += ` ¡Pedido listo!\n`;
+    msg += ` Gracias por pedir en GaNime\n`;
+    msg += ` Te responderemos pronto\n\n`;
+    msg += ` *¡Disfruta tus ANIMES!*`;
+    
+    // Enviar a WhatsApp
     window.open(`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`, '_blank');
     
+    // Vaciar carrito
     setTimeout(() => {
         carrito = [];
         guardarCarrito();
         actualizarCarrito();
         renderizar();
-        toast('Pedido enviado. Carrito vaciado');
-    }, 1000);
+        toast('✅ Pedido enviado. Carrito vaciado');
+    }, 1500);
 }
 
 function toast(msg) {
