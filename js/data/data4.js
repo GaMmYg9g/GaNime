@@ -1506,6 +1506,35 @@ const ANIMES_PARTE3 = [
     saga: "Psycho-Pass",
     ordenSaga: 2
 },
+{
+    nombre: "Yakusoku no Neverland",
+    nombre2: "The Promised Neverland",
+    estado: "en-descarga",
+    capitulosTotales: 12,
+    capitulosActuales: 2,
+    portada: "IMG/yakusokuNN.jpg",
+    temporadasTotales: 2,
+    temporadaActual: 1,
+    descripcion: "...En el orfanato Grace Field House, un grupo de niños huérfanos vive una vida idílica bajo el cuidado de una mujer a la que llaman 'Mamá'. Emma, Norman y Ray, los tres niños más inteligentes del hogar, descubren una terrible verdad: el orfanato es en realidad una granja donde los niños son criados para ser alimento de monstruos demoníacos. La primera temporada sigue el plan de escape de los tres genios, que deben usar su astucia para engañar a Mamá y salvar a todos los niños antes de que sea demasiado tarde.",
+    valoracion: 8.1,
+    color: "#dc2626",
+    cardBg: "#0a0a0a",
+    categorias: ["Acción", "Fantasía Oscura", "Horror", "Misterio", "Psicológico", "Sobrenatural", "Shonen", "Suspenso", "Recomendada"],
+    enlaceDescarga: "#",
+    tamañoPorCapitulo: "140 MB",
+    tamañoTotal: "1.68 GB",
+    calidad: "1080p",
+    //capitulos: "12",
+    tipo: "serie",
+    año: 2019,
+    estudio: "CloverWorks",
+    creador: "Kaiu Shirai, Posuka Demizu",
+    duracion: "23 min",
+    audio: "Japonés",
+    subtitulos: "Español",
+    saga: "Yakusoku no Neverland",
+    ordenSaga: 1
+},
 ]
 
 ANIMES.push(...ANIMES_PARTE3);
