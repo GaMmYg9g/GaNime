@@ -496,7 +496,7 @@ const ANIMES_PARTE2 = [
     {
         nombre: "Initial D - First Stage",
         estado: "finalizada",
-        portada: "IMG/initiald1.jpg",
+        portada: "IMG/initialD.jpg",
         temporadasTotales: 6,
         temporadaActual: 1,
         descripcion: "Takumi Fujiwara es un estudiante que trabaja en la tienda de tofu de su padre. Durante años ha realizado entregas matutinas al Monte Akina, desarrollando habilidades de conducción sobrehumanas en el Toyota Sprinter Trueno AE86. Sin entender de carreras callejeras, Takumi se ve envuelto en el mundo de las carreras ilegales cuando derrota a los corredores más rápidos de la región.",
@@ -521,7 +521,7 @@ const ANIMES_PARTE2 = [
     {
         nombre: "Initial D - Second Stage",
         estado: "finalizada",
-        portada: "IMG/initiald2.jpg",
+        portada: "IMG/initialD2.jpg",
         temporadasTotales: 6,
         temporadaActual: 2,
         descripcion: "Takumi continúa perfeccionando su técnica en el AE86 mientras se prepara para enfrentar a oponentes más poderosos. Su fama lo lleva a competir contra los veloces corredores de Akagi, liderados por la escudería Emperors. Ryosuke Takahashi le propone un desafío que cambiará su vida: convertirse en un corredor profesional.",
@@ -571,7 +571,7 @@ const ANIMES_PARTE2 = [
     {
         nombre: "Initial D - Third Stage",
         estado: "finalizada",
-        portada: "IMG/initiald3.jpg",
+        portada: "IMG/initialD3.jpg",
         temporadasTotales: 6,
         temporadaActual: 3,
         descripcion: "Han pasado dos años. Takumi ha terminado la preparatoria y debe decidir su futuro. Un nuevo desafío surge cuando Kai Kogashiwa, hijo del legendario piloto, lo reta a una carrera definitiva. La película adapta el arco que conecta la segunda con la cuarta etapa, mostrando la evolución de Takumi.",
@@ -596,7 +596,7 @@ const ANIMES_PARTE2 = [
     {
         nombre: "Initial D - Fourth Stage",
         estado: "finalizada",
-        portada: "IMG/initiald4.jpg",
+        portada: "IMG/initialD4.jpg",
         temporadasTotales: 6,
         temporadaActual: 4,
         descripcion: "Takumi acepta unirse al proyecto de Ryosuke para formar el equipo Project D, con el objetivo de conquistar todas las prefecturas de Japón. Keisuke lo acompaña en esta aventura, donde Takumi enfrenta a los mejores corredores de montaña y desarrolla nuevas técnicas mientras descubre los límites de su AE86.",
@@ -646,7 +646,7 @@ const ANIMES_PARTE2 = [
     {
         nombre: "Initial D - Fifth Stage",
         estado: "finalizada",
-        portada: "IMG/initiald5.jpg",
+        portada: "IMG/initialD5.jpg",
         temporadasTotales: 6,
         temporadaActual: 5,
         descripcion: "Project D continúa su conquista por Japón, adentrándose en la región de Kanto. Takumi y Keisuke enfrentan a oponentes más experimentados y peligrosos. La temporada profundiza en la psicología de los rivales y el sacrificio necesario para alcanzar la cima del automovilismo callejero.",
@@ -671,7 +671,7 @@ const ANIMES_PARTE2 = [
     {
         nombre: "Initial D - Final Stage",
         estado: "finalizada",
-        portada: "IMG/initiald6.jpg",
+        portada: "IMG/initialDFinal.jpg",
         temporadasTotales: 6,
         temporadaActual: 6,
         descripcion: "Project D llega a su última batalla: enfrentar al legendario equipo de Kanagawa, liderado por Shinji Inui, un joven prodigio que conduce un Toyota Levin idéntico al AE86 de Takumi. La carrera definitiva en las carreteras de Nagao pone a prueba todo lo aprendido por Takumi durante años de competencia.",
@@ -695,8 +695,9 @@ const ANIMES_PARTE2 = [
     },
     {
         nombre: "Initial D - Battle Stage",
+        nombre2: "Initial D - Legend 1",
         estado: "finalizada",
-        portada: "IMG/initiald_battle1.jpg",
+        portada: "IMG/initialDBattle1.jpg",
         temporadasTotales: 6,
         temporadaActual: 3.5,
         descripcion: "Recopilatorio especial que muestra todas las carreras de las primeras tres etapas sin diálogos, solo con sonidos de motores y banda sonora. Ideal para revivir los momentos más emocionantes de las batallas de Takumi contra sus rivales más memorables.",
@@ -720,8 +721,9 @@ const ANIMES_PARTE2 = [
     },
     {
         nombre: "Initial D - Battle Stage 2",
+        nombre2: "Initial D - Legend 2",
         estado: "finalizada",
-        portada: "IMG/initiald_battle2.jpg",
+        portada: "IMG/initialDBattle2.jpg",
         temporadasTotales: 6,
         temporadaActual: 4.5,
         descripcion: "Segundo recopilatorio que reúne todas las carreras de la Fourth Stage, mostrando las batallas más intensas de Project D en su conquista por las prefecturas. Incluye las legendarias carreras de Takumi contra el S2000 de Todo School y los potentes vehículos del equipo Katagiri.",
@@ -745,8 +747,9 @@ const ANIMES_PARTE2 = [
     },
     {
         nombre: "Initial D - Battle Stage 3",
+        nombre2: "Initial D - Legend 1",
         estado: "finalizada",
-        portada: "IMG/initiald_battle3.jpg",
+        portada: "IMG/initialDBattle3.jpg",
         temporadasTotales: 6,
         temporadaActual: 6.5,
         descripcion: "Recopilatorio final que abarca las carreras de la Fifth Stage y la Final Stage. Muestra el cierre de Project D y la última batalla de Takumi contra Shinji Inui. Incluye también las carreras más destacadas de Keisuke y la evolución de ambos pilotos.",
@@ -1214,7 +1217,7 @@ const ANIMES_PARTE2 = [
         nombre2: "Yu-Gi-Oh! Duel Monsters: Capsule Monsters",
         estado: "en-descarga",
         capitulosTotales: 12,
-        capitulosActuales: 7,
+        capitulosActuales: 9,
         arcosTotales: 10,
         arcoActual: 8,
         portada: "IMG/YGOVA.jpg",
