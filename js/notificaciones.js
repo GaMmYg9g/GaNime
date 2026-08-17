@@ -485,6 +485,26 @@ function detectarCambios() {
             );
         }
         
+        //🔥 Si cambió a "finalizada"
+        if (estadoPrev === 're-descarga' && estadoActual === 'finalizada') {
+            agregarNotificacion(
+                'finalizada',
+                `Serie Finalizada`,
+                `"${anime.nombre}" ha sido Re-Descargado correctamente y ya está disponible.`,
+                { nombre: anime.nombre, color: anime.color }
+            );
+        }
+        
+        //🔥 Si cambió a "finalizada"
+        if (estadoPrev === 'en-descarga' && estadoActual === 'finalizada') {
+            agregarNotificacion(
+                'finalizada',
+                `Serie Finalizada`,
+                `"${anime.nombre}" ha sido Descargado correctamente y ya está disponible.`,
+                { nombre: anime.nombre, color: anime.color }
+            );
+        }
+        
                 // 🔥 Si cambió a "en-pausa"
         if (estadoPrev !== 'en-pausa' && estadoActual === 'en-pausa') {
             agregarNotificacion(
@@ -506,6 +526,7 @@ function detectarCambios() {
                     { nombre: anime.nombre, color: anime.color }
                 );
             } 
+            
             // Venía de incompleta
             else if (estadoPrev === 'incompleta') {
                 const actuales = anime.capitulosActuales || 0;
