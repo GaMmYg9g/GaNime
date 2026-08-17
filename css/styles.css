@@ -39,7 +39,7 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 900;
     background: linear-gradient(135deg, var(--morado), var(--morado-claro));
     -webkit-background-clip: text;
@@ -48,7 +48,7 @@ body {
 }
 
 .logo-icon {
-    font-size: 32px;
+    font-size: 25px;
     -webkit-text-fill-color: var(--morado);
     color: var(--morado);
     transition: all 0.3s ease;
