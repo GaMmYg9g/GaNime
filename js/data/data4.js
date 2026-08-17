@@ -1,5 +1,4 @@
 const ANIMES_PARTE3 = [
-// ===== NANATSU NO TAIZAI - TEMPORADA 4 (LA IRA DE LOS DIOSES) =====
 {
     nombre: "Nanatsu no Taizai: Kamigami no Gekirin",
     nombre2: "The Seven Deadly Sins: Wrath of the Gods",
@@ -26,7 +25,6 @@ const ANIMES_PARTE3 = [
     subtitulos: "Español",
     saga: "Nanatsu no Taizai"
 },
-// ===== NANATSU NO TAIZAI - TEMPORADA 5 (EL JUICIO DEL DRAGÓN) =====
 {
     nombre: "Nanatsu no Taizai: Fundo no Shinpan",
     nombre2: "The Seven Deadly Sins: Dragon's Judgement",
@@ -53,7 +51,6 @@ const ANIMES_PARTE3 = [
     subtitulos: "Español",
     saga: "Nanatsu no Taizai"
 },
-// ===== HIGH SCHOOL OF THE DEAD - OVA =====
 {
     nombre: "High School of the Dead - Drifters of the Dead",
     nombre2: "High School of the Dead - Drifters of the Dead",
@@ -80,7 +77,6 @@ const ANIMES_PARTE3 = [
     subtitulos: "Español",
     saga: "High School of the Dead"
 },
-// ===== HIGH SCHOOL OF THE DEAD - SERIE =====
 {
     nombre: "High School of the Dead",
     nombre2: "High School of the Dead",
@@ -107,7 +103,6 @@ const ANIMES_PARTE3 = [
     subtitulos: "Español",
     saga: "High School of the Dead"
 },
-// ===== MOB PSYCHO 100 - TEMPORADA 1 =====
 {
     nombre: "Mob Psycho 100",
     nombre2: "Mob Psycho 100",
@@ -134,7 +129,6 @@ const ANIMES_PARTE3 = [
     subtitulos: "Español",
     saga: "Mob Psycho 100"
 },
-// ===== MOB PSYCHO 100 II - TEMPORADA 2 =====
 {
     nombre: "Mob Psycho 100 - II",
     nombre2: "Mob Psycho 100 II",
@@ -161,7 +155,6 @@ const ANIMES_PARTE3 = [
     subtitulos: "Español",
     saga: "Mob Psycho 100"
 },
-// ===== MOB PSYCHO 100 III - TEMPORADA 3 =====
 {
     nombre: "Mob Psycho 100 - III",
     nombre2: "Mob Psycho 100 III",
@@ -188,7 +181,6 @@ const ANIMES_PARTE3 = [
     subtitulos: "Español",
     saga: "Mob Psycho 100"
 },
-// ===== AJIN - TEMPORADA 1 =====
 {
     nombre: "Ajin",
     nombre2: "Ajin: Demi-Human",
@@ -216,7 +208,6 @@ const ANIMES_PARTE3 = [
     saga: "Ajin",
     ordenSaga: 1,
 },
-// ===== AJIN - TEMPORADA 2 =====
 {
     nombre: "Ajin - Season 2",
     nombre2: "Ajin: Demi-Human - Season 2",
@@ -244,7 +235,6 @@ const ANIMES_PARTE3 = [
     saga: "Ajin",
     ordenSaga: 3,
 },
-// ===== MOBILE SUIT GUNDAM 00 - TEMPORADA 1 =====
 {
     nombre: "Mobile Suit Gundam 00",
     nombre2: "Mobile Suit Gundam 00",
@@ -274,7 +264,6 @@ const ANIMES_PARTE3 = [
     ordenSaga: 7,
     ordenSagaGlobal: 2,
 },
-// ===== MOBILE SUIT GUNDAM 00 - TEMPORADA 2 =====
 {
     nombre: "Mobile Suit Gundam 00 - Season 2",
     nombre2: "Mobile Suit Gundam 00 - Season 2",
@@ -304,7 +293,6 @@ const ANIMES_PARTE3 = [
     ordenSaga: 8,
     ordenSagaGlobal: 2,
 },
-// ===== MOBILE SUIT GUNDAM 00: A WAKENING OF THE TRAILBLAZER (PELÍCULA) =====
 {
     nombre: "Mobile Suit Gundam 00: A Wakening of the Trailblazer",
     nombre2: "Mobile Suit Gundam 00: A Wakening of the Trailblazer",
@@ -388,7 +376,6 @@ const ANIMES_PARTE3 = [
     saga: "Ajin",
     ordenSaga: 4,
 },
-// ===== NUKITASHI THE ANIMATION - SERIE =====
 {
     nombre: "Nukitashi the Animation",
     nombre2: "Nukitashi the Animation",
@@ -415,7 +402,6 @@ const ANIMES_PARTE3 = [
     subtitulos: "Español",
     saga: "Nukitashi"
 },
-// ===== NUKITASHI THE ANIMATION - OVAS (ESPECIALES) =====
 {
     nombre: "Nukitashi the Animation - OVAs",
     nombre2: "Nukitashi the Animation - OVAs",
@@ -442,7 +428,6 @@ const ANIMES_PARTE3 = [
     subtitulos: "Español",
     saga: "Nukitashi"
 },
-// ===== DIAMOND NO ACE - TEMPORADA 2 =====
 {
     nombre: "Diamond no Ace - Temporada 2",
     nombre2: "Ace of the Diamond - Season 2",
@@ -563,7 +548,6 @@ const ANIMES_PARTE3 = [
     ordenSaga: 1,
     ordenSagaGlobal: 2,
 },
-// ===== GACHIAKUTA - TEMPORADA 1 =====
 {
     nombre: "Gachiakuta",
     nombre2: "Gachiakuta",
@@ -590,7 +574,6 @@ const ANIMES_PARTE3 = [
     subtitulos: "Español",
     saga: "Gachiakuta"
 },
-// ===== TOMB RAIDER KING - TEMPORADA 1 =====
 {
     nombre: "Tomb Raider King",
     nombre2: "Tomb Raider King",
@@ -619,7 +602,6 @@ const ANIMES_PARTE3 = [
     subtitulos: "Español",
     saga: "Tomb Raider King"
 },
-// ===== SHINGEKI NO KYOJIN - OVAS DE ENTRENAMIENTO (UNIDOS) =====
 {
     nombre: "Shingeki no Kyojin: Entrenamiento de Cadetes",
     nombre2: "Attack on Titan: Cadet Training OVAs",
@@ -698,9 +680,6 @@ const ANIMES_PARTE3 = [
     subtitulos: "Español",
     saga: "Isekai Meikyū de Harem o"
 },
-// ============================================
-// KUROKO NO BASKET - TEMPORADA 1
-// ============================================
 {
     nombre: "Kuroko no Basket",
     nombre2: "Kuroko's Basketball",
@@ -728,9 +707,6 @@ const ANIMES_PARTE3 = [
     saga: "Kuroko no Basket",   
     ordenSaga: 1,
 },
-// ============================================
-// KUROKO NO BASKET - TEMPORADA 2
-// ============================================
 {
     nombre: "Kuroko no Basket - Season 2",
     nombre2: "Kuroko's Basketball - Season 2",
@@ -785,9 +761,6 @@ const ANIMES_PARTE3 = [
     saga: "Kuroko no Basket",
     ordenSaga: 5,
 },
-// ============================================
-// KUROKO NO BASKET: LAST GAME (PELÍCULA)
-// ============================================
 {
     nombre: "Kuroko no Basket: Last Game",
     nombre2: "Kuroko's Basketball: Last Game",
@@ -815,7 +788,6 @@ const ANIMES_PARTE3 = [
     saga: "Kuroko no Basket",
     ordenSaga: 7,
 },
-// ===== DOROHEDORO - TEMPORADA 1 =====
 {
     nombre: "Dorohedoro",
     estado: "re-descarga",
@@ -842,9 +814,6 @@ const ANIMES_PARTE3 = [
     saga: "Dorohedoro",
     ordenSaga: 1,
 },
-// ============================================
-// EL CASTILLO AMBULANTE
-// ============================================
 {
     nombre: "El Castillo Ambulante",
     nombre2: "Howl's Moving Castle",
@@ -862,7 +831,7 @@ const ANIMES_PARTE3 = [
     tamañoPorCapitulo: "4.3 GB",
     tamañoTotal: "4.3 GB",
     calidad: "720p",
-    //capitulos: "1",
+    capitulos: "1",
     tipo: "película",
     año: 2004,
     estudio: "Studio Ghibli",
@@ -872,9 +841,6 @@ const ANIMES_PARTE3 = [
     subtitulos: "Español",
     saga: "Studio Ghibli",
 },
-// ============================================
-// KIKI: ENTREGAS A DOMICILIO
-// ============================================
 {
     nombre: "Kiki: Entregas a Domicilio",
     nombre2: "Kiki's Delivery Service",
@@ -892,7 +858,7 @@ const ANIMES_PARTE3 = [
     tamañoPorCapitulo: "3.8 GB",
     tamañoTotal: "3.8 GB",
     calidad: "720p",
-    //capitulos: "1",
+    capitulos: "1",
     tipo: "película",
     año: 1989,
     estudio: "Studio Ghibli",
@@ -902,9 +868,6 @@ const ANIMES_PARTE3 = [
     subtitulos: "Español",
     saga: "Studio Ghibli",
 },
-// ============================================
-// LA PRINCESA MONONOKE
-// ============================================
 {
     nombre: "La Princesa Mononoke",
     nombre2: "Princess Mononoke",
@@ -922,7 +885,7 @@ const ANIMES_PARTE3 = [
     tamañoPorCapitulo: "4.5 GB",
     tamañoTotal: "4.5 GB",
     calidad: "720p",
-    //capitulos: "1",
+    capitulos: "1",
     tipo: "película",
     año: 1997,
     estudio: "Studio Ghibli",
@@ -932,9 +895,6 @@ const ANIMES_PARTE3 = [
     subtitulos: "Español",
     saga: "Studio Ghibli",
 },
-// ============================================
-// LA TUMBA DE LAS LUCIÉRNAGAS
-// ============================================
 {
     nombre: "La Tumba de las Luciérnagas",
     nombre2: "Grave of the Fireflies",
@@ -952,7 +912,7 @@ const ANIMES_PARTE3 = [
     tamañoPorCapitulo: "3.5 GB",
     tamañoTotal: "3.5 GB",
     calidad: "720p",
-    //capitulos: "1",
+    capitulos: "1",
     tipo: "película",
     año: 1988,
     estudio: "Studio Ghibli",
@@ -962,9 +922,6 @@ const ANIMES_PARTE3 = [
     subtitulos: "Español",
     saga: "Studio Ghibli",
 },
-// ============================================
-// MI VECINO TOTORO
-// ============================================
 {
     nombre: "Mi Vecino Totoro",
     nombre2: "My Neighbor Totoro",
@@ -982,7 +939,7 @@ const ANIMES_PARTE3 = [
     tamañoPorCapitulo: "3.8 GB",
     tamañoTotal: "3.8 GB",
     calidad: "720p",
-    //capitulos: "1",
+    capitulos: "1",
     tipo: "película",
     año: 1988,
     estudio: "Studio Ghibli",
@@ -992,9 +949,6 @@ const ANIMES_PARTE3 = [
     subtitulos: "Español",
     saga: "Studio Ghibli",
 },
-// ============================================
-// PONYO EN EL ACANTILADO
-// ============================================
 {
     nombre: "Ponyo en el Acantilado",
     nombre2: "Ponyo on the Cliff by the Sea",
@@ -1012,7 +966,7 @@ const ANIMES_PARTE3 = [
     tamañoPorCapitulo: "4.0 GB",
     tamañoTotal: "4.0 GB",
     calidad: "720p",
-    //capitulos: "1",
+    capitulos: "1",
     tipo: "película",
     año: 2008,
     estudio: "Studio Ghibli",
@@ -1022,9 +976,6 @@ const ANIMES_PARTE3 = [
     subtitulos: "Español",
     saga: "Studio Ghibli",
 },
-// ============================================
-// DIGIMON ADVENTURE
-// ============================================
 {
     nombre: "Digimon: Adventure",
     nombre2: "Digimon: Aventura",
@@ -1054,9 +1005,6 @@ const ANIMES_PARTE3 = [
     saga: "Digimon",
     ordenSaga: 1,
 },
-// ============================================
-// BAKUGAN BATTLE BRAWLERS
-// ============================================
 {
     nombre: "Bakugan: Battle Brawlers",
     estado: "en-pausa",
@@ -1085,7 +1033,6 @@ const ANIMES_PARTE3 = [
     saga: "Bakugan",
     ordenSaga: 1,
 },
-// ===== PARASYTE -THE MAXIM- (2014-2015) =====
 {
     nombre: "Parasyte",
     nombre2: "Kiseijuu: Sei no Kakuritsu",
@@ -1115,7 +1062,6 @@ const ANIMES_PARTE3 = [
     saga: "Parasyte",
     ordenSaga: 1,
 },
-// ===== YOUJO SENKI II (EN EMISIÓN) =====
 {
     nombre: "Youjo Senki - II",
     nombre2: "The Saga of Tanya the Evil - II",
@@ -1145,7 +1091,6 @@ const ANIMES_PARTE3 = [
     saga: "Youjo Senki",
     ordenSaga: 2
 },
-// ===== BAKEMONOGATARI =====
 {
     nombre: "Bakemonogatari",
     estado: "finalizada",
@@ -1173,7 +1118,6 @@ const ANIMES_PARTE3 = [
     sagaMadre: "Monogatari",
     ordenSaga: 1
 },
-// ===== KIZUMONOGATARI I: TEKKETSU (PELÍCULA) =====
 {
     nombre: "Kizumonogatari: Tekketsu-hen",
     nombre2: "Kizumonogatari: Iron Blood",
@@ -1203,7 +1147,6 @@ const ANIMES_PARTE3 = [
     sagaMadre: "Monogatari",
     ordenSaga: 2
 },
-// ===== KIZUMONOGATARI II: NEKKETSU (PELÍCULA) =====
 {
     nombre: "Kizumonogatari: Nekketsu-hen",
     nombre2: "Kizumonogatari: Hot Blood",
@@ -1233,7 +1176,6 @@ const ANIMES_PARTE3 = [
     sagaMadre: "Monogatari",
     ordenSaga: 3
 },
-// ===== KIZUMONOGATARI III: REIKETSU (PELÍCULA) =====
 {
     nombre: "Kizumonogatari: Reiketsu-hen",
     nombre2: "Kizumonogatari: Cold Blood",
@@ -1263,9 +1205,6 @@ const ANIMES_PARTE3 = [
     sagaMadre: "Monogatari",
     ordenSaga: 4
 },
-// ============================================
-// VINLAND SAGA - TEMPORADA 1
-// ============================================
 {
     nombre: "Vinland Saga",
     estado: "re-descarga",
@@ -1294,9 +1233,6 @@ const ANIMES_PARTE3 = [
     saga: "Vinland Saga",
     ordenSaga: 1
 },
-// ============================================
-// VINLAND SAGA - TEMPORADA 2
-// ============================================
 {
     nombre: "Vinland Saga - Season 2",
     estado: "re-descarga",
@@ -1325,7 +1261,6 @@ const ANIMES_PARTE3 = [
     saga: "Vinland Saga",
     ordenSaga: 2
 },
-    // ===== TOKYO GHOUL =====
     {
         nombre: "Tokyo Ghoul",
         estado: "finalizada",
@@ -1351,7 +1286,6 @@ const ANIMES_PARTE3 = [
         subtitulos: "Español",
         saga: "Tokyo Ghoul"
     },
-    // ===== TOKYO GHOUL √A - TEMPORADA 2 =====
 {
     nombre: "Tokyo Ghoul - √A",
     nombre2: "Tokyo Ghoul - Root A",
@@ -1381,38 +1315,6 @@ const ANIMES_PARTE3 = [
     saga: "Tokyo Ghoul",
     ordenSaga: 2
 },
-// ===== KIMETSU NO YAIBA: INFINITY CASTLE - PARTE 1 (PELÍCULA) =====
-{
-    nombre: "Kimetsu no Yaiba: Infinity Castle - Parte 1",
-    nombre2: "Demon Slayer: Infinity Castle - Part 1",
-    nombre3: "Gekijō-ban Kimetsu no Yaiba Mugen Jō-hen",
-    estado: "finalizada",
-    portada: "IMG/kimetsumov1.jpg",
-    partesTotales: "3",
-    parteActual: "1",
-    temporadasTotales: 1,
-    temporadaActual: 1,
-    descripcion: "...Primera película de la trilogía que adapta el arco final de Kimetsu no Yaiba. Tras el entrenamiento de los Pilares, Muzan Kibutsuji ataca la mansión Ubuyashiki y arrastra a los cazadores al Castillo Infinito, la fortaleza laberíntica de los demonios. Tanjiro, Nezuko y los Pilares se enfrentan a las temibles Lunas Superiores en una batalla desesperada que define el destino de la humanidad [citation:10][citation:12]. La película da comienzo al enfrentamiento final entre el Cuerpo de Exterminio de Demonios y Muzan, con una animación de ufotable que ha sido aclamada como una obra maestra visual [citation:2][citation:7].",
-    valoracion: 8.7,
-    color: "#dc2626",
-    cardBg: "#0a0a0a",
-    categorias: ["Acción", "Fantasía Oscura", "Aventura", "Sobrenatural", "Shonen", "Drama", "Demonios", "Recomendada"],
-    enlaceDescarga: "#",
-    tamañoPorCapitulo: "988 MB",
-    tamañoTotal: "0.99 GB",
-    calidad: "720p",
-    capitulos: "1",
-    tipo: "pelicula",
-    año: 2025,
-    estudio: "ufotable",
-    creador: "Koyoharu Gotouge",
-    duracion: "155 min",
-    audio: "Japonés",
-    subtitulos: "Español",
-    saga: "Kimetsu no Yaiba",
-    ordenSaga: 8
-},
-// ===== BLACK TORCH - TEMPORADA 1 (EN EMISIÓN) =====
 {
     nombre: "Black Torch",    
     estado: "en-descarga",
@@ -1441,7 +1343,6 @@ const ANIMES_PARTE3 = [
     saga: "Black Torch",
     ordenSaga: 1
 },
-// ===== IMAWA NO KUNI NO ARISU (ALICE IN BORDERLAND) - OVA =====
 {
     nombre: "Imawa no Kuni no Alice",
     nombre2: "Alice in Borderland",
@@ -1469,9 +1370,6 @@ const ANIMES_PARTE3 = [
     saga: "Alice in Borderland",
     ordenSaga: 1
 },
-// ============================================
-// PSYCHO-PASS - TEMPORADA 1
-// ============================================
 {
     nombre: "Psycho-Pass",
     estado: "finalizada",
@@ -1498,7 +1396,6 @@ const ANIMES_PARTE3 = [
     saga: "Psycho-Pass",
     ordenSaga: 1
 },
-// ===== BLACK LAGOON - TEMPORADA 1 =====
 {
     nombre: "Black Lagoon",
     estado: "finalizada",
@@ -1525,7 +1422,6 @@ const ANIMES_PARTE3 = [
     saga: "Black Lagoon",
     ordenSaga: 1
 },
-// ===== BLACK LAGOON: THE SECOND BARRAGE - TEMPORADA 2 =====
 {
     nombre: "Black Lagoon: The Second Barrage",
     nombre2: "Black Lagoon - Season 2",
@@ -1535,13 +1431,13 @@ const ANIMES_PARTE3 = [
     temporadaActual: 2,
     descripcion: "...Segunda temporada de la serie, que continúa directamente los eventos de la primera. La Lagoon Company se enfrenta a nuevos desafíos en Roanapur, incluyendo una confrontación con el misterioso y peligroso 'Hombre de la Mano Cortada' y la organización terrorista japonesa 'The Washimine Group'. Rock comienza a mostrar su verdadero potencial como estratega, mientras Revy lidia con su turbulento pasado. La temporada adapta los arcos de 'Greenback Jane' y 'Fujiyama Gangsta Paradise', explorando la creciente tensión entre Rock y Revy, y la oscura realidad del mundo criminal en el que viven.",
     valoracion: 8.2,
-    color: "#facc15",
-    cardBg: "#0a0a0a",
+    color: "#ca222a",
+    cardBg: "#000",
     categorias: ["Acción", "Crimen", "Drama", "Seinen", "Mercenarios", "Violencia", "Recomendada"],
     enlaceDescarga: "#",
     tamañoPorCapitulo: "97 MB",
     tamañoTotal: "1.14 GB",
-    calidad: "720p",
+    calidad: "540p",
     capitulos: "12",
     tipo: "serie",
     año: 2006,
@@ -1553,7 +1449,6 @@ const ANIMES_PARTE3 = [
     saga: "Black Lagoon",
     ordenSaga: 2
 },
-// ===== BLACK LAGOON: ROBERTA'S BLOOD TRAIL - OVA =====
 {
     nombre: "Black Lagoon: Roberta's Blood Trail",
     estado: "en-descarga",
@@ -1564,7 +1459,7 @@ const ANIMES_PARTE3 = [
     temporadaActual: 1,
     descripcion: "...OVA de cinco episodios que sirve como secuela directa de la serie, numerada como episodios 25-29. Roberta, la ex terrorista conocida como el 'Sabueso de Florencia', regresa a Roanapur para vengar la muerte de su patrón, Diego Lovelace, asesinado en un atentado en Venezuela. Su sed de venganza la lleva a perseguir a los responsables, miembros de las fuerzas especiales estadounidenses, sumiendo a la ciudad en el caos. La Lagoon Company se ve envuelta en el conflicto cuando Garcia Lovelace contrata a Rock para encontrar a Roberta. El OVA profundiza en el personaje de Rock, su creciente oscuridad y su capacidad para manipular los acontecimientos, mientras Revy observa con preocupación cómo su compañero se sumerge en el lado más corrupto de Roanapur.",
     valoracion: 8.0,
-    color: "#facc15",
+    color: "#c21010",
     cardBg: "#0a0a0a",
     categorias: ["Acción", "Crimen", "Drama", "Seinen", "Mercenarios", "Venganza", "Violencia", "Recomendada"],
     enlaceDescarga: "#",
