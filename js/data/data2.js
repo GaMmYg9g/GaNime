@@ -1855,7 +1855,7 @@ const ANIMES_PARTE2 = [
         año: 2013,
         estudio: "Wit Studio, Production I.G",
         creador: "Hajime Isayama",
-        duracion: "3-5 min",
+        duracion: "10 min",
         audio: "Japonés",
         subtitulos: "Español",
         saga: "Shingeki no Kyojin"
