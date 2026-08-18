@@ -1,26 +1,30 @@
-const CACHE_NAME = 'ganime-v3';
-const OFFLINE_URL = '/index.html';
+const CACHE_NAME = 'ganime-v4';
+const OFFLINE_URL = '/GaNime/index.html';
 
-// Recursos a cachear
+// Recursos a cachear - TODOS con /GaNime/
 const urlsToCache = [
-    '/',
-    '/index.html',
-    '/manifest.json',
-    '/css/styles.css',
-    '/js/config.js',
-    '/js/data.js',
-    '/js/data2.js',
-    '/js/app.js',
+    '/GaNime/',
+    '/GaNime/index.html',
+    '/GaNime/manifest.json',
+    '/GaNime/css/styles.css',
+    '/GaNime/css/temas.css',
+    '/GaNime/js/config.js',
+    '/GaNime/js/sonidos.js',
+    '/GaNime/js/data/data.js',
+    '/GaNime/js/data/data2.js',
+    '/GaNime/js/data/data3.js',
+    '/GaNime/js/data/data4.js',
+    '/GaNime/js/notificaciones.js',
+    '/GaNime/js/info.js',
+    '/GaNime/js/app.js',
+    '/GaNime/js/temas.js',
+    '/GaNime/js/info.json',
     'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css',
     'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap'
 ];
 
 // ===== AÑADIR TUS OPENINGS AQUÍ =====
-// Haz una lista con TODOS tus archivos de música
-// Ejemplo:
-'/music/otonoke.mp3',
-// '/music/solo_leveling_op.mp3',
-// '/music/chainsaw_op.mp3',
+// Ejemplo: '/GaNime/music/otonoke.mp3',
 
 // ===== INSTALACIÓN =====
 self.addEventListener('install', (event) => {
@@ -33,6 +37,9 @@ self.addEventListener('install', (event) => {
             .then(() => {
                 console.log('[SW] Instalación completada');
                 return self.skipWaiting();
+            })
+            .catch((error) => {
+                console.error('[SW] Error en instalación:', error);
             })
     );
 });
@@ -75,10 +82,8 @@ self.addEventListener('fetch', (event) => {
             caches.match(request)
                 .then((cachedResponse) => {
                     if (cachedResponse) {
-                        // Si está en caché, devolverlo (0 datos)
                         return cachedResponse;
                     }
-                    // Si no está en caché, descargar y guardar
                     return fetch(request).then((networkResponse) => {
                         if (networkResponse && networkResponse.status === 200) {
                             caches.open(CACHE_NAME).then((cache) => {
@@ -87,7 +92,6 @@ self.addEventListener('fetch', (event) => {
                         }
                         return networkResponse;
                     }).catch(() => {
-                        // Fallback: silencio (no hay audio)
                         return new Response(null, { status: 404 });
                     });
                 })
