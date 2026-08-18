@@ -11,13 +11,14 @@
     
     <title>GaNime</title>
     
-    <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" href="icons/icono.jpg">
+    <!-- 🔥 CORREGIDO: Ruta absoluta con /GaNime/ -->
+    <link rel="manifest" href="/GaNime/manifest.json">
+    <link rel="apple-touch-icon" href="/GaNime/icons/icono.jpg">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/temas.css">    
+    <link rel="stylesheet" href="/GaNime/css/styles.css">
+    <link rel="stylesheet" href="/GaNime/css/temas.css">    
 </head>
 <body>
 
@@ -204,24 +205,25 @@
     </div>
 
     <!-- SCRIPTS -->
-    <script src="js/config.js"></script>
-    <script src="js/sonidos.js"></script>
-    <script src="js/data/data.js"></script>
-    <script src="js/data/data2.js"></script>
-    <script src="js/data/data3.js"></script>
-    <script src="js/data/data4.js"></script>
-    <script src="js/notificaciones.js"></script>
-    <script src="js/info.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/temas.js"></script>
+    <!-- 🔥 CORREGIDOS: Todas las rutas con /GaNime/ -->
+    <script src="/GaNime/js/config.js"></script>
+    <script src="/GaNime/js/sonidos.js"></script>
+    <script src="/GaNime/js/data/data.js"></script>
+    <script src="/GaNime/js/data/data2.js"></script>
+    <script src="/GaNime/js/data/data3.js"></script>
+    <script src="/GaNime/js/data/data4.js"></script>
+    <script src="/GaNime/js/notificaciones.js"></script>
+    <script src="/GaNime/js/info.js"></script>
+    <script src="/GaNime/js/app.js"></script>
+    <script src="/GaNime/js/temas.js"></script>
 
     <script>
-        // ===== SERVICE WORKER =====
+        // ===== SERVICE WORKER - CORREGIDO =====
         if ('serviceWorker' in navigator && location.protocol !== 'file:') {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js')
+                navigator.serviceWorker.register('/GaNime/sw.js')
                     .then((registration) => {
-                        // Service Worker registrado
+                        console.log('✅ Service Worker registrado correctamente');
                     })
                     .catch((error) => {
                         console.log('❌ Error al registrar Service Worker:', error);
