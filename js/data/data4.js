@@ -433,7 +433,7 @@ const ANIMES_PARTE3 = [
     nombre2: "Ace of the Diamond - Season 2",
     estado: "en-descarga",
     capitulosTotales: 51,
-    capitulosActuales: 20,
+    capitulosActuales: 30,
     portada: "IMG/diamondA_s2.jpg",
     temporadasTotales: 3,
     temporadaActual: 2,
