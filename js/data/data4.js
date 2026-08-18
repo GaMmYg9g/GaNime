@@ -1518,7 +1518,7 @@ const ANIMES_PARTE3 = [
     color: "#d2be7b",
     cardBg: "#000",
     categorias: ["Acción", "Fantasía Oscura", "Horror", "Misterio", "Psicológico", "Sobrenatural", "Shonen", "Suspenso", "Recomendada"],
-    enlaceDescarga: "#",
+    enlaceDescarga: "https://www.fireload.com/folder/7e4c113fe50a6ceebee55024209589a6/Yakusoku_no_Neverland_BD",
     tamañoPorCapitulo: "131 MB",
     tamañoTotal: "1.54 GB",
     calidad: "720p",
