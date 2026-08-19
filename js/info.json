@@ -98,10 +98,10 @@
             "",
             { "estilo": "viñeta", "texto": "• <span style='color:#3498db;font-weight:700;'>Diamond no Ace - Season 2</span>→ [Deporte, Baseball]" },
             { "estilo": "viñeta", "texto": "• <span style='color:#22c55e;font-weight:700;'>Pokémon: La Busqueda del  Maestro</span> → [Fantasía, Aventuras]" },
-            { "estilo": "viñeta", "texto": "• <span style='color:#ec4899;font-weight:700;'>Yu-Gi-Oh! Duel Monsters: La Capsula de los Monstruos</span> → [Juegos, Fantasía]" },
+            { "estilo": "viñeta", "texto": "• <span style='color:#ec4899;font-weight:700;'>Monster</span> → [Suspenso,Psicológico]" },
             { "estilo": "viñeta", "texto": "• <span style='color:#f59e0b;font-weight:700;'>Yu-Gi-Oh! GX: La Academia de Duelos</span> → [Juegos, Fantasía]" },
             { "estilo": "viñeta", "texto": "• <span style='color:#f59e0b;font-weight:700;'>Yu-Gi-Oh! 5D's: El Nacimiento de los Signos</span> → [Juegos, Fantasía]" },
-            { "estilo": "viñeta", "texto": "• <span style='color:#e74c3c;font-weight:700;'>Gachiakuta</span> → [Fantasía Oscura, Acción]" },
+            { "estilo": "viñeta", "texto": "• <span style='color:#e74c3c;font-weight:700;'>Rainbow</span> → [Drama, Seinen]" },
             { "estilo": "viñeta", "texto": "• <span style='color:#a53d1ced;font-weight:700;'>Ergo Proxy</span> → [Misterio, Ciencia-Ficción]" },
             "",
             { "estilo": "texto", "texto": "Según se COMPLETEN las <span style='color:#f59e0b;font-weight:700;'>DESCARGAS</span> se ACTUALIZARÁN los <span style='color:#3498db;font-weight:700;'>ESTADOS</span> y se <span style='color:#2ecc71;font-weight:700;'>NOTIFICARÁ</span>." }
