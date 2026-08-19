@@ -1381,7 +1381,7 @@ const ANIMES_PARTE3 = [
     color: "#1caa64",
     cardBg: "#030603",
     categorias: ["Ciencia Ficción", "Suspenso", "Psicológico", "Drama", "Cyberpunk", "Policíaco", "Seinen", "Recomendada"],
-    enlaceDescarga: "#",
+    enlaceDescarga: "https://www.mediafire.com/folder/zf6j9twyp0yk6/PP",
     tamañoPorCapitulo: "127 MB",
     tamañoTotal: "2.74 GB",
     calidad: "720p",
