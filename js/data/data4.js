@@ -1545,7 +1545,7 @@ const ANIMES_PARTE3 = [
     color: "#dc2626",
     cardBg: "#0a0a0a",
     categorias: ["Acción", "Fantasía Oscura", "Horror", "Misterio", "Psicológico", "Sobrenatural", "Shonen", "Suspenso"],
-    enlaceDescarga: "#",
+    enlaceDescarga: "https://www.mediafire.com/folder/myhyxlyvhlhfd/Yakusoku+no+Neverland+2nd+Season",
     tamañoPorCapitulo: "125 MB",
     tamañoTotal: "1.35 GB",
     calidad: "720p",
