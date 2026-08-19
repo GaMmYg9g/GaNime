@@ -1521,8 +1521,6 @@ const ANIMES_PARTE2 = [
     },
     {
         nombre: "K-Project",
-        nombre2: "K-Project",
-        nombre3: "K",
         estado: "finalizada",
         portada: "IMG/k-proj.jpg",
         temporadasTotales: 1,
@@ -1532,7 +1530,7 @@ const ANIMES_PARTE2 = [
         color: "#3b82f6",
         cardBg: "#0a0a1a",
         categorias: ["Acción", "Sobrenatural", "Drama", "Misterio", "Fantasía", "Seinen"],
-        enlaceDescarga: "#",
+        enlaceDescarga: "https://www.fireload.com/folder/b2829c0b6426c3069494953c5a5ce3f5/K_BD",
         tamañoPorCapitulo: "140 MB",
         tamañoTotal: "1.80 GB",
         calidad: "720p",
@@ -1544,7 +1542,8 @@ const ANIMES_PARTE2 = [
         duracion: "24 min",
         audio: "Japonés",
         subtitulos: "Español",
-        saga: "K-Project"
+        saga: "K-Project",
+        ordenSaga: 1,
     },
     {
         nombre: "Ergo Proxy",
