@@ -1591,7 +1591,7 @@ const ANIMES_PARTE3 = [
     nombre: "Monster",
     estado: "en-descarga",
     capitulosTotales: 74,
-    capitulosActuales: 3,
+    capitulosActuales: 12,
     portada: "IMG/monster.jpg",
     temporadasTotales: 1,
     temporadaActual: 1,
