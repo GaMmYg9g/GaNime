@@ -714,9 +714,8 @@ body {
 }
 
 .btn-descarga {
-    background: #e1e1e1;
-    color: #45008fd2;
-    border: 1px solid var(--borde);
+    background: var(--color-anime )!important;
+    color: var(--card-bg) !important;
     min-width: 36px;
     flex: 0 1 auto;
 }
