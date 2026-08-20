@@ -11,7 +11,7 @@
             { "estilo": "texto", "texto": "<i class='fas fa-calendar-alt' style='color:#fbbf24;'></i> Actualizado: <b>30/07/2026</b>" },
             { "estilo": "important", "texto": "<i class='fas fa-folder-open' style='color:#24904f;'></i> Total de animes: <b>{total}</b>" },
             { "estilo": "texto", "texto": "<i class='fas fa-video' style='color:#0fabb2;'></i> <span style='color:#0086c7;font-weight:700;'>Calidad: HD Ligero [480p - 720p]</span>" },
-            { "estilo": "destacado", "texto": "<i class='fas fa-gamepad' style='color:#ffc700;'></i> <span style='color:#ffc700; font-weight:700;'>Versión Beta: 1.9.9.3</span>" },
+            { "estilo": "destacado", "texto": "<i class='fas fa-gamepad' style='color:#ffc700;'></i> <span style='color:#ffc700; font-weight:700;'>Versión Beta: 1.9.9.5</span>" },
             "",
             { "estilo": "texto", "texto": "<i class='fas fa-phone' style='color:#3498db;'></i> Contacto: <b>+53 56502201</b>" },
             { "estilo": "texto", "texto": "<i class='fas fa-globe' style='color:#a78bfa;'></i> Web: <b>https://gammyg9g@github.io/GaNime</b>" },
