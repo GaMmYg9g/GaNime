@@ -408,8 +408,8 @@ resultados.forEach(item => {
     // Si se encontró un nombre alternativo, resaltar la parte que coincide
     let altHtml = '';
     if (nombreAlternativoCoincidente) {
-        const altDestacado = nombreAlternativoCoincidente.replace(regex, match => `<span style="color: #a78bfa; font-weight: 600;">${match}</span>`);
-        altHtml = `<div style="font-size:13px;color:var(--text2);margin-top:2px;">${altDestacado}</div>`;
+        const altDestacado = nombreAlternativoCoincidente.replace(regex, match => `<span style="color: var(--morado-tema); font-weight: 600;">${match}</span>`);
+        altHtml = `<div style="font-size:13px;color:var(--text-tema);margin-top:2px;">${altDestacado}</div>`;
     }
 
     const infoExtra = [];
@@ -690,7 +690,7 @@ function renderizar() {
                             <i class="fas ${enCarrito ? 'fa-check' : 'fa-cart-plus'}"></i> ${enCarrito ? 'Añadida' : 'Añadir'}
                         </button>
                         ${tieneDescarga ? `
-                            <a href="${item.enlaceDescarga}" target="_blank" class="btn-descarga" onclick="event.stopPropagation();" style="color: ${colorAnime}; border-color: ${colorAnime};">
+                            <a href="${item.enlaceDescarga}" target="_blank" class="btn-descarga" onclick="event.stopPropagation();" >
                                 <i class="fas fa-download"></i>
                             </a>
                         ` : ''}
