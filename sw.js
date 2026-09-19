@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ganime-v4';
+const CACHE_NAME = 'ganime-v5';
 const OFFLINE_URL = '/GaNime/index.html';
 
 // Recursos a cachear - TODOS con /GaNime/
