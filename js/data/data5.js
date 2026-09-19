@@ -565,7 +565,7 @@ const ANIMES_PARTE4 = [
     nombre: "Jujutsu Kaisen: Shibuya Jihen",
     nombre2: "Jujutsu Kaisen - Season 3: Shibuya Incident",
     nombre3: "Jujutsu Kaisen - Temporada 3: Incidente de Shibuya",
-    nombre4: "Jujutsu Kaisen - Season 3"
+    nombre4: "Jujutsu Kaisen - Season 3",
     estado: "finalizada",
     portada: "IMG/jujutsuKaisen3.jpg",
     temporadasTotales: 3,
