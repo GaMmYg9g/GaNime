@@ -122,7 +122,7 @@ const ANIMES_PARTE4 = [
 // ===== LIAR GAME - SERIE COMPLETA (2026) =====
 {
     nombre: "Liar Game",
-    estado: "finalizada",
+    estado: "en-descarga",
     portada: "IMG/liarGame.jpg",
     capitulosTotales: 26,
     capitulosActuales: 24,
