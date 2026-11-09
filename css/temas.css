@@ -1,0 +1,600 @@
+/* ============================================
+   SISTEMA DE TEMAS - GaNime
+   ============================================ */
+
+/* ===== PANEL DE TEMAS ===== */
+.temas-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 360px;
+    background: var(--bg-tema);
+    z-index: 2001;
+    transform: translateX(100%);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 24px 20px;
+    overflow-y: auto;
+    border-left: 1px solid var(--borde-tema);
+}
+.temas-panel.active {
+    transform: translateX(0);
+}
+.temas-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 2000;
+    display: none;
+}
+.temas-backdrop.active {
+    display: block;
+}
+.temas-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--borde-tema);
+}
+.temas-header button {
+    background: var(--card-tema);
+    border: 1px solid var(--borde-tema);
+    color: var(--text-tema);
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s;
+}
+.temas-header button:hover {
+    background: var(--morado-tema);
+    color: white;
+}
+.temas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px 12px;
+}
+.tema-opcion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--card-tema);
+    border: 2px solid var(--borde-tema);
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    padding: 0;
+    width: 100%;
+    max-width: 100px;
+    margin: 0 auto;
+}
+.tema-opcion:hover {
+    transform: scale(1.05);
+}
+.tema-opcion.activo {
+    border-color: var(--morado-tema);
+    box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.3);
+}
+.tema-icono {
+    font-size: 28px;
+    color: var(--text-tema);
+}
+.tema-nombre {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-tema);
+    margin-top: 6px;
+    text-align: center;
+}
+
+/* ===== DEFINICIÓN DE TEMAS ===== */
+body.tema-original {
+    --bg-tema: #0d0a1a;
+    --card-tema: #14102a;
+    --text-tema: #ffff;
+    --borde-tema: #2a1f4a;
+    --morado-tema: #7c3aed;    
+}
+body.tema-claro {
+    --bg-tema: #f5f5f5;
+    --card-tema: #ffffff;
+    --text-tema: #1a1a2e;
+    --borde-tema: #d0d0d0;
+    --morado-tema: #aadfff;    
+}
+body.tema-oscuro {
+    --bg-tema: #0a0a0a;
+    --card-tema: #1a1a1a;
+    --text-tema: #ffffff;
+    --borde-tema: #3a3a3a;
+    --morado-tema: #111111;    
+}
+body.tema-primavera {
+    --bg-tema: #ffeaff;
+    --card-tema: #ffffff;
+    --text-tema: #b34b68;
+    --borde-tema: #b8d9b0;
+    --morado-tema: #3b8565;    
+}
+body.tema-verano {
+    --bg-tema: #fcfce7;
+    --card-tema: #ffffff;
+    --text-tema: #0071df;
+    --borde-tema: #fff180;
+    --morado-tema: #44aacb;    
+}
+
+body.tema-otono {
+    --bg-tema: #f5eee6;
+    --card-tema: #ffffff;
+    --text-tema: #3d2e1e;
+    --borde-tema: #d4b8a0;
+    --morado-tema: #6e492e;
+}
+    
+body.tema-invierno {
+    --bg-tema: #eef2f7;
+    --card-tema: #ffffff;
+    --text-tema: #1e2a3a;
+    --borde-tema: #b0c4de;
+    --morado-tema: #4a6a8a;
+}
+body.tema-halloween {
+    --bg-tema: #1a0f0a;
+    --card-tema: #2a1a12;
+    --text-tema: #f0d8c0;
+    --borde-tema: #8a4a2a;
+    --morado-tema: #d97a2a;
+    --notif-tema: #120908;
+}
+body.tema-navidad {
+    --bg-tema: #0a1a0a;
+    --card-tema: #1a2a1a;
+    --text-tema: #bf2028;
+    --borde-tema: #4a7a4a;
+    --morado-tema: #edb900;
+    --notif-tema: #070f06;
+}
+body.tema-fin-de-ano {
+    --bg-tema: #740a0a;
+    --card-tema: #1a1a2a;
+    --text-tema: #f0cf00;
+    --borde-tema: #fff100;
+    --morado-tema: #e8d84a;
+    --notif-tema: ;
+}
+
+/* ============================================
+   ELEMENTOS QUE SÍ SE MODIFICAN
+   ============================================ */
+
+body {
+    background: var(--bg-tema) !important;
+}
+
+.header {
+    background: var(--bg-tema) !important;
+    border-bottom: 1px solid var(--borde-tema) !important;
+}
+
+.logo {
+    background: linear-gradient(135deg, var(--morado-tema), var(--morado-tema)) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+.logo-icon {
+    color: var(--morado-tema) !important;
+}
+
+.header-count {
+    background: var(--card-tema) !important;
+    border: 1px solid var(--borde-tema) !important;
+    color: var(--text-tema) !important;
+}
+.header-count span {
+    color: var(--morado-tema) !important;
+}
+
+/* Botones del header (incluyendo temas) */
+.header-btn {
+    background: var(--card-tema) !important;
+    border: 1px solid var(--borde-tema) !important;
+    color: var(--text-tema) !important;
+}
+.header-btn:hover {
+    border-color: var(--morado-tema) !important;
+}
+
+/* Carrito - solo fondo y borde, el badge lo maneja styles.css */
+.cart-btn {
+    background: var(--card-tema) !important;
+    border: 1px solid var(--borde-tema) !important;
+    color: var(--text-tema) !important;
+}
+.cart-btn:hover {
+    border-color: var(--morado-tema) !important;
+}
+
+.search-box {
+    background: var(--bg-tema) !important;
+}
+.search-box input {
+    background: var(--card-tema) !important;
+    border: 1px solid var(--borde-tema) !important;
+    color: var(--text-tema) !important;
+}
+.search-box input:focus {
+    border-color: var(--morado-tema) !important;
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15) !important;
+}
+.search-box input::placeholder {
+    color: var(--text-tema) !important;
+    opacity: 0.6;
+}
+.search-icon {
+    color: var(--text-tema) !important;
+}
+.search-clear {
+    color: var(--text-tema) !important;
+}
+
+.filters {
+    background: var(--bg-tema) !important;
+}
+.filter-chip {
+    background: var(--card-tema) !important;
+    border: 1px solid var(--borde-tema) !important;
+    color: var(--text-tema) !important;
+}
+.filter-chip:hover {
+    border-color: var(--morado-tema) !important;
+}
+.filter-chip.active {
+    background: var(--morado-tema) !important;
+    color: var(--card-tema) !important;
+    border-color: var(--card-tema) !important;
+}
+.filters-scroll::-webkit-scrollbar-thumb {
+    background: var(--morado-tema) !important;
+}
+.filters-scroll::-webkit-scrollbar-track {
+    background: var(--bg-tema) !important;
+}
+.filters-scroll {
+    scrollbar-color: var(--morado-tema) var(--bg-tema) !important;
+}
+
+.result-stats {
+    color: var(--text-tema) !important;
+}
+
+.search-overlay {
+    background: var(--bg-tema) !important;
+}
+.search-overlay-title {
+    color: var(--text-tema) !important;
+}
+.suggestion-item {
+    border-bottom: 1px solid var(--borde-tema) !important;
+}
+.suggestion-item:hover {
+    background: var(--card-tema) !important;
+}
+.suggestion-item .suggestion-name {
+    color: var(--text-tema) !important;
+}
+.suggestion-item .suggestion-name strong {
+    color: var(--morado-tema) !important;
+}
+.suggestion-item .suggestion-details {
+    color: var(--text-tema) !important;
+}
+
+.cart-sidebar {
+    background: var(--bg-tema);
+}
+.temas-panel {
+    background: var(--bg-tema) !important;
+    border-left: 1px solid var(--borde-tema) !important;
+}
+.cart-header,
+.notif-header,
+.info-header,
+.temas-header {
+    border-bottom: 1px solid var(--borde-tema) !important;
+}
+.cart-header h2 {
+    color: var(--morado-tema);
+}
+.notif-header h3,
+.info-header h3,
+.temas-header h3 {
+    color: var(--text-tema) !important;
+}
+.cart-item {
+    border-bottom: 1px solid var(--borde-tema) !important;
+}
+.cart-item-name {
+    color: var(--morado-tema) !important;
+    font-weight: bold;
+}
+.cart-item-type {
+    color: var(--text-tema) !important;
+    font-weight: bold;
+}
+
+.notif-item {
+    background: var(--notif-tema) !important;    
+}
+
+.notif-titulo {
+    color: var(--text-tema) !important;
+}
+.notif-mensaje {
+    color: var(--text-tema) !important;
+}
+.info-card {
+    background: var(--bg-tema) !important;
+    border: 1px solid var(--borde-tema) !important;
+}
+.info-titulo {
+    color: var(--text-tema) !important;
+}
+.info-contenido {
+    color: var(--text-tema) !important;
+}
+
+.toast {
+    background: var(--card-tema) !important;
+    color: var(--text-tema) !important;
+    border: 1px solid var(--borde-tema) !important;
+}
+.cart-badge {
+    background: var(--bg-tema);
+    color: var(--text-tema);
+}
+
+.info-panel {
+    background: var(--bg-tema);
+}
+
+.notif-panel {
+    background: var(--bg-tema);
+}
+
+.notif-empty {
+    color: var(--text-tema);
+}
+
+.cart-empty {
+    color: var(--text-tema);
+}
+
+.cart-totals {
+    color: var(--text-tema);
+    font-weight: bold;
+}
+
+.cart-total-line span:last-child {
+    color: var(--morado-tema);
+}
+
+.cart-header button {
+    background: var(--morado-tema);
+    border: 1px solid var(--borde);
+    color: var(--bg-tema);
+}
+.cart-header button:hover {
+    background: var(--bg-tema);
+    color: var(--morado-tema);  
+}
+
+.cart-footer {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 2px solid var(--text-tema);
+}
+
+.cart-item:hover {
+    background: var(--bg-tema);
+}
+
+/* ============================================
+   ADORNOS DECORATIVOS EN TARJETAS Y MODAL
+   ============================================ */
+
+.card::after {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 20px;
+    opacity: 0.12;
+    pointer-events: none;
+    z-index: 2;
+    transition: opacity 0.3s ease;
+}
+.card:hover::after {
+    opacity: 0.25;
+}
+body.tema-original .card::after { content: '\f0e7'; }
+body.tema-claro .card::after { content: '\f0eb'; }
+body.tema-oscuro .card::after { content: '\f0c5'; }
+body.tema-primavera .card::after { content: '\f4dc'; }
+body.tema-verano .card::after { content: '\f185'; }
+body.tema-otono .card::after { content: '\f06c'; }
+body.tema-invierno .card::after { content: '\f2dc'; }
+body.tema-halloween .card::after { content: '\f6e2'; }
+body.tema-navidad .card::after { content: '\f1bb'; }
+body.tema-fin-de-ano .card::after { content: '\f6b2'; }
+
+/* Modal - esquina inferior derecha */
+.modal::after {
+    content: '';
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 40px;
+    opacity: 0.06;
+    pointer-events: none;
+    z-index: 1001;
+    transition: opacity 0.3s ease;
+}
+.modal:hover::after {
+    opacity: 0.12;
+}
+body.tema-original .modal::after { content: '\f0e7'; }
+body.tema-claro .modal::after { content: '\f0eb'; }
+body.tema-oscuro .modal::after { content: '\f0c5'; }
+body.tema-primavera .modal::after { content: '\f4dc'; }
+body.tema-verano .modal::after { content: '\f185'; }
+body.tema-otono .modal::after { content: '\f06c'; }
+body.tema-invierno .modal::after { content: '\f2dc'; }
+body.tema-halloween .modal::after { content: '\f6e2'; }
+body.tema-navidad .modal::after { content: '\f1bb'; }
+body.tema-fin-de-ano .modal::after { content: '\f6b2'; }
+
+/* Modal - esquina superior izquierda */
+.modal::before {
+    content: '';
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 28px;
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: 1001;
+    transition: opacity 0.3s ease;
+}
+.modal:hover::before {
+    opacity: 0.10;
+}
+body.tema-primavera .modal::before { content: '\f4d9'; }
+body.tema-verano .modal::before { content: '\f185'; }
+body.tema-otono .modal::before { content: '\f06c'; }
+body.tema-invierno .modal::before { content: '\f2dc'; }
+body.tema-halloween .modal::before { content: '\f6e2'; }
+body.tema-navidad .modal::before { content: '\f1bb'; }
+body.tema-fin-de-ano .modal::before { content: '\f6b2'; }
+body.tema-original .modal::before { content: '\f0e7'; }
+body.tema-claro .modal::before { content: '\f0eb'; }
+body.tema-oscuro .modal::before { content: '\f0c5'; }
+
+/* Modal - borde decorativo en contenido */
+.modal-body-content::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 10%;
+    right: 10%;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--morado-tema), transparent);
+    opacity: 0.2;
+    border-radius: 4px;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+.modal-body-content:hover::before {
+    opacity: 0.4;
+}
+
+/* Modal - decoración en imagen */
+.modal-img::after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 24px;
+    opacity: 0.08;
+    pointer-events: none;
+    z-index: 3;
+    transition: opacity 0.3s ease;
+}
+.modal-img:hover::after {
+    opacity: 0.15;
+}
+body.tema-primavera .modal-img::after { content: '\f4d9'; }
+body.tema-verano .modal-img::after { content: '\f185'; }
+body.tema-otono .modal-img::after { content: '\f06c'; }
+body.tema-invierno .modal-img::after { content: '\f2dc'; }
+body.tema-halloween .modal-img::after { content: '\f6e2'; }
+body.tema-navidad .modal-img::after { content: '\f1bb'; }
+body.tema-fin-de-ano .modal-img::after { content: '\f6b2'; }
+body.tema-original .modal-img::after { content: '\f0e7'; }
+body.tema-claro .modal-img::after { content: '\f0eb'; }
+body.tema-oscuro .modal-img::after { content: '\f0c5'; }
+
+/* ===== PARTÍCULAS ===== */
+.particula {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    font-size: 20px;
+    opacity: 0.6;
+    animation: caidaParticula linear infinite;
+}
+@keyframes caidaParticula {
+    0% {
+        transform: translateY(-10vh) rotate(0deg) scale(0.8);
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(110vh) rotate(720deg) scale(1.2);
+        opacity: 0;
+    }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+    .temas-panel {
+        max-width: 100%;
+        padding: 16px;
+    }
+    .temas-grid {
+        gap: 12px 8px;
+    }
+    .tema-opcion {
+        max-width: 80px;
+    }
+    .tema-icono {
+        font-size: 22px;
+    }
+    .tema-nombre {
+        font-size: 10px;
+    }
+    .modal::after {
+        font-size: 28px;
+        bottom: 12px;
+        right: 12px;
+    }
+    .modal::before {
+        font-size: 20px;
+        top: 12px;
+        left: 12px;
+    }
+    .modal-img::after {
+        font-size: 18px;
+    }
+}
