@@ -41,7 +41,7 @@ const ANIMES_PARTE6 = [
     temporadaActual: 14,
     descripcion: "...Ash y Pikachu llegan a la ciudad de Eindoak, donde conocen a Victini. Un descendiente del pueblo del Valle de la Espada busca mover la 'Espada de la Tierra' con la ayuda de Zekrom, lo que podría destruir la ciudad.",
     valoracion: 7.1,
-    color: "#1a1a2e",
+    color: "#f1f1f1",
     cardBg: "#0a0a0a",
     categorias: ["Aventura", "Fantasía", "Película"],
     enlaceDescarga: "#",
