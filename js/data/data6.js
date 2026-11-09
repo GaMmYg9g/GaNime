@@ -1773,7 +1773,7 @@ const ANIMES_PARTE5 = [
     temporadaActual: 10,
     descripcion: "...En la ciudad de Alamos, el espacio-tiempo se distorsiona por el enfrentamiento entre Dialga y Palkia. Darkrai, un Pokémon misterioso, parece ser el culpable, pero Ash descubre que en realidad los está protegiendo.",
     valoracion: 7.7,
-    color: "#1a1a2e",
+    color: "#c80800",
     cardBg: "#0a0a0a",
     categorias: ["Aventura", "Fantasía", "Película"],
     enlaceDescarga: "#",
